@@ -1,0 +1,84 @@
+/* Mobile-first styling */
+@media screen and (min-width: 320px) and (max-width: 374px) {}
+
+.title-faq {
+    font-size: 24px;
+    text-align: center;
+    display: flex;
+    align-items: flex-start;
+    padding-bottom: 32px;
+}
+
+.faq {
+    padding: 0;
+    list-style: none;
+}
+
+.sub-faq {
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 16px;
+}
+
+.question-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.question {
+    font-size: 18px;
+    margin: 0;
+}
+
+.accord-btn {
+    background: url('path-to-arrow-icon') no-repeat center;
+    background-size: contain;
+    border: none;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+
+.par-faq {
+    display: none;
+    margin-top: 8px;
+    font-size: 16px;
+    color: #666;
+}
+
+/* Tablet View */
+@media (min-width: 768px) {
+    .title-faq {
+        font-size: 32px;
+    }
+
+    .question {
+        font-size: 20px;
+    }
+}
+
+/* Desktop View */
+@media (min-width: 1440px) {
+    .faq{
+        display: flex;
+        flex-direction: row;
+
+    }
+    .desktop-v {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+
+    .sub-faq {
+        width: 48%;
+    }
+}
+
+.arrow-up,
+.arrow-down {
+    width: 20px;
+    height: 20px;
+    display: block;
+    color: #FAFAFA;
+}
