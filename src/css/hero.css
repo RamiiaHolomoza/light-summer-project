@@ -67,9 +67,30 @@
     }
 
     .hero-list{
+        gap:8px;
+        justify-content: right;
     }
+
+    .hero-list-item:not(:last-child) {
+        width: 55px;
+        height: 55px;
+    }
+    
+    .hero-list-item:last-child {
+        padding: 18px 24px;
+    }
+    .hero-list-link{
+    font-size: 16px;
+}
 }
 
-@media screen and (min-width: 1280px) {
-    
+@media screen and (min-width: 1440px) {
+    .container-hero {
+        gap: 243px;
+    }
+
+    .hero-text {
+        padding-right: 178px;
+        padding-left: 178px;
+    }
 }
