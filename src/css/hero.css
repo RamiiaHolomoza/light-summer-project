@@ -62,8 +62,9 @@
         }
     
     .hero-text {
-        font-size: 90px;
         padding-right: 72px;
+        font-weight: 500;
+        font-size: 90px;
     }
 
     .hero-list{
@@ -90,7 +91,8 @@
     }
 
     .hero-text {
-        padding-right: 178px;
-        padding-left: 178px;
+        padding-right: 146px;
+        padding-left: 146px;
+    
     }
 }
