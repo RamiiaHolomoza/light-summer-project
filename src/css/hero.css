@@ -1,5 +1,14 @@
 /* .section-hero{} */
-
+/* body {
+    background-image: url('path-to-your-image.png'); */
+    /* шлях до вашого зображення */
+    /* background-size: cover; */
+    /* змінює розмір зображення, щоб повністю покрити весь фон */
+    /* background-repeat: no-repeat; */
+    /* забороняє повторювати зображення */
+    /* background-position: center; */
+    /* вирівнює зображення по центру */
+/* } */
 .container-hero{
     min-width: 320px;
     padding-top: 281px;
@@ -8,6 +17,18 @@
     flex-direction: column;
     gap: 218px;
     
+
+    background-image: url('../img/hero/hero-blue-mob-1x.png');
+    background-repeat: no-repeat;
+    background-size: 578px 812px; 
+    background-position: -268px 0px;
+    /* 728 1024 */
+}
+
+@media (min-resolution: 192dpi) {
+    .container-hero {
+        background-image: url('../img/hero/hero-blue-mob-2x.png');
+    }
 }
 
 .hero-text{
@@ -59,7 +80,11 @@
     .container-hero {
             padding-top: 300px;
             gap: 187px;
+
+            background-size: 728px 1024px; 
+            background-position: -257px 0px;
         }
+    
     
     .hero-text {
         padding-right: 72px;
@@ -88,7 +113,17 @@
 @media screen and (min-width: 1440px) {
     .container-hero {
         gap: 243px;
+
+        background-image: url('../img/hero/hero-blue-1x.png');
+        background-size: 1400px 900px;
+        background-position: 0px 0px;
     }
+
+    @media (min-resolution: 192dpi) {
+            .container-hero {
+                background-image: url('../img/hero/hero-blue-2x.png');
+            }
+        }
 
     .hero-text {
         padding-right: 146px;
