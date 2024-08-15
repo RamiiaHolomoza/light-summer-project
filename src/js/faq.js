@@ -1,16 +1,12 @@
 import Accordion from 'accordion-js';
 import 'accordion-js/dist/accordion.min.css';
+import axios from 'axios';
 
-document.addEventListener("DOMContentLoaded", function() {
-    new Accordion('.faq', {
-        duration: 600,
-        ariaEnabled: true,
-        collapse: true,
-        showMultiple: false,
-        onlyChildNodes: true,
-        elementClass: 'sub-faq',
-        triggerClass: 'accord-btn',
-        panelClass: 'par-faq',
-        activeClass: 'is-active'
-    });
+const buttons = document.querySelectorAll(".faq-toggle");
+buttons.forEach((button) => {
+  button.addEventListener("click", () =>
+    button.parentElement.classList.toggle("open")
+  );
 });
+
+
