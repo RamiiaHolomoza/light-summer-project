@@ -1,34 +1,3 @@
-/*
-Верстка адаптивна, окрім мобільних пристроїв. Точки перелому:
-   - mobile: верстка гумова від 320px, стає адаптивною з 375px;
-   - tablet: з 768px;
-   - desktop: з 1440px 
-
-
-   @media screen and (min-width: 768px) {
-  .container {
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 10px;
-  }
-
-  .element {
-    flex-basis: calc((100% - 10px) / 2);
-    font-size: 32px;
-  }
-}
-
-@media screen and (min-width: 1440px) {
-  .container {
-    gap: 15px;
-  }
-
-  .element {
-    flex-basis: calc((100% - 30px) / 3);
-  }
-}
-
-*/
 *,
 *::before,
 *::after {
@@ -37,9 +6,6 @@
 
 .section-covers {
   position: relative;
-  background-color: #1c1d20;
-  background-image: url(./images/covers/bg-covers.png);
-  background-size: cover;
 }
 
 .container-covers {
@@ -47,25 +13,34 @@
   justify-content: center;
   min-width: 320px;
   height: 508px;
-  margin: 0 auto;
 
   position: absolute;
-  right: -800px;
+
   left: 0;
   overflow: hidden;
+
+  background-image: url('../img/covers/bg-covers.png');
+  background-color: #1c1d20;
+  background-repeat: no-repeat;
+  background-size: 1018px 784px;
+}
+
+@media (min-resolution: 192dpi) {
+  .container-covers {
+    background-image: url('../img/covers/bg-covers-retina.png');
+  }
 }
 
 @media screen and (min-width: 768px) {
   .container-covers {
-    width: 768px;
+    background-size: 1288px 1004px;
     height: 960px;
   }
 }
 
 @media screen and (min-width: 1440px) {
   .container-covers {
-    width: 1440px;
-    height: 960px;
+    background-size: 1528px 1064px;
   }
 }
 
@@ -73,15 +48,15 @@
   display: none;
 }
 
-.cover-list {
+.covers-list {
   height: 100vh;
   display: flex;
   transform: rotate(16deg);
 }
 
 .covers-project {
-  flex-shrink: 0;
   margin-right: 10px;
+  flex-shrink: 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -92,7 +67,7 @@
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
 }
-@keyframes coversProject {
+@keyframes marqueeLine {
   from {
     transform: translateX(-20%);
   }
@@ -102,9 +77,8 @@
   }
 }
 
+/*
 .covers-img {
-  /* width: 544px;
-  height: 314px;
-  */
-  background-color: red;
+  width: 282px;
 }
+*/
