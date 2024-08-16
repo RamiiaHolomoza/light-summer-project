@@ -1,14 +1,112 @@
-.faq-toggle{
+.section-faq{
+    overflow-x: hidden;
+}
+
+/* Mobile-first */
+.faq {
+    position: relative;
+    padding-right: 50px; 
+    border-top: 1px solid #FAFAFA; 
+    border-bottom: 1px solid #FAFAFA; 
+  }
+
+  /* .faq-toggle {
+    position: absolute;
+    top: 10px; 
+    right: 10px; 
     width: 40px;
     height: 40px;
     border: 1px;
     border-radius: 100px;
     padding: 1px 7px;
-    /* background-color: transparent; */
     color: #FAFAFA;
     font-size: 25px;
     font-weight: 600;
-    margin-right: 10px;
     text-align: center;
     transition: transform .5s ease-in-out;
+  } */
+
+  .title-faq{
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.5;
+    letter-spacing: -0.02em;
+    color: #FAFAFA;
+    padding-bottom: 32px;
+  }
+
+  .faq-container{
+    padding-bottom: 64px;
+  }
+
+  .question{
+    padding: 20px 0 16px;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.5;
+    letter-spacing: -0.02em;
+    color: #FAFAFA;
+  }
+  .faq-text{
+    padding-bottom: 24px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: -0.02em;
+    color: #FAFAFA;
+  }
+
+  /* Tablet */
+  @media screen and (min-width: 768px) and (max-width: 1280px) {
+    .show-tablet {
+      display: block;
+    }
+    .faq-container{
+        padding-bottom: 96px;
+    }
+    .question{
+        padding: 32px 0 26px;
+    }
+}
+
+
+/* Desktop */
+@media screen and (min-width: 1280px) {
+    .show-tablet {
+      display: none;
+    }
+    .faq-container{
+        padding-bottom: 164px;
+    }
+    /* .faq-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas: 
+        "item-1 item-2"
+        "item-3 item-4"
+        "item-5 item-6";
+        gap: 0; 
+        position: relative; 
+        width: 100%;
+      } */
+      /* .faq-container::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 50%;
+        width: 1px;
+        background-color: #FAFAFA;
+      } */
+      .faq-container .faq {
+        padding: 0 32px; 
+        /* border-bottom: 1px solid #FAFAFA;  */
+      }  
+      .faq-container .faq:nth-child(odd) {
+        padding-left: 0;
+    }
+    .question {
+        padding: 32px 0 26px;
+    }
 }
