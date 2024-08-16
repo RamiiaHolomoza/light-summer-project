@@ -65,8 +65,8 @@ const questions = [
              <svg class="faq-icon" style="position: absolute; top: 10px; right: 10px; width: 40px; height: 40px; border: 1px solid; border-radius: 100px; color: #FAFAFA;">
             <use href="${svgroot}"></use>
           </svg>
-            <h3 style="font-size: 16px; font-weight: 600; line-height: 1.5; letter-spacing: -0.02em; padding-bottom: 32px;">${topic}</h3>
-            <p class="faq-text" style="padding-bottom: 24px; font-size: 16px; font-weight: 500; line-height: 1.5; letter-spacing: -0.02em;">${text}</p>
+            <h3  style= "padding-top: 20px; padding-bottom: 16px;">${topic}</h3>
+            <p class="faq-text" style="padding-bottom: 20px;">${text}</p>
           </li>`
       )
       .join('');
@@ -101,12 +101,28 @@ styleElement.textContent = `
     display: none;
 }`;
 styleElement.textContent = `
+
   @media screen and (min-width: 768px) and (max-width: 1280px) {
     .faq-container {
       padding-bottom: 96px;
     }
     .faq {
       padding: 32px 0 26px;
+    }
+    .faq h3 {
+      padding-top: 32px;
+      padding-bottom: 26px;
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 1.5;
+      letter-spacing: -0.02em;
+    }
+    .faq p {
+      padding-bottom: 26px;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 1.5;
+      letter-spacing: -0.02em;
     }
   }
   @media screen and (min-width: 1280px) {
