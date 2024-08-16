@@ -12,3 +12,7 @@ const swiper = new Swiper('.swiper', {
     prevEl: '.swiper-button-prev',
   },
 });
+
+document.querySelector('.custom-button-next').addEventListener('click', () => {
+  swiper.slideNext();
+});
