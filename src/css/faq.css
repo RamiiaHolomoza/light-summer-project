@@ -68,6 +68,9 @@
     .question{
         padding: 32px 0 26px;
     }
+    .faq-text{
+      padding-bottom: 26px;
+    }
 }
 
 
