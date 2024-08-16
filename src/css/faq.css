@@ -1,5 +1,6 @@
-.section-faq{
+.cont-faq{
     overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 
 /* Mobile-first */
