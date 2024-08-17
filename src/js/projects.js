@@ -10,9 +10,6 @@ const swiper = new Swiper('.swiper', {
     nextEl: '.custom-button-next',
     prevEl: '.custom-button-prev',
   },
-  on: {
-    slideChange: btnDisable, // Call btnDisable on slide change
-  },
 });
 
 function btnDisable() {
