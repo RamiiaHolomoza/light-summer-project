@@ -14,10 +14,14 @@
 .faq-icon {
   transition: transform 0.3s ease;
 }
+/* .faq-icon path {
+  stroke: white; 
+} */
 
 .faq.active .faq-icon {
   transform: rotate(180deg); 
 }
+
 /* Mobile-first */
 .faq {
     position: relative;

@@ -63,7 +63,7 @@ const questions = [
       .map(
         ({ svgroot, topic, text }, index) => `
           <li class="faq" style="position: relative; padding-right: 50px; ${index !== questions.length - 1 ? 'border-bottom: 1px solid #FAFAFA;' : ''}">
-             <svg class="faq-icon" style="position: absolute; top: 32px; right: 10px; width: 40px; height: 40px; border: 1px solid; border-radius: 100px; color: #FAFAFA;">
+             <svg class="faq-icon" style="position: absolute; top: 32px; right: 10px; width: 40px; height: 40px; border: 1px solid; border-radius: 100px;">
             <use href="${svgroot}"></use>
           </svg>
             <h3 class="question" style="font-size: 20px; font-weight: 600; line-height: 1.5; letter-spacing: -0.02em;">${topic}</h3>
