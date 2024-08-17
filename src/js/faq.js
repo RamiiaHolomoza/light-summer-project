@@ -74,42 +74,26 @@ const questions = [
   }
   ulElement.insertAdjacentHTML('beforeend', createFAQMarkup(questions));
 
-function handleCardClick(event) {
-  if (event.target.closest('svg')) {
-    const faqItem = event.target.closest('.faq');
-    const faqText = faqItem.querySelector('.faq-text');
-    faqText.style.display = faqText.style.display === 'none' ? 'block' : 'none';
-    const accordion = new Accordion(faqItem);
-    accordion.toggle();
+  function handleCardClick(event) {
+    if (event.target.closest('.faq-icon')) { 
+      const faqItem = event.target.closest('.faq');
+      const faqText = faqItem.querySelector('.faq-text');
+  
+      faqItem.classList.toggle('active');
+  
+      if (faqItem.classList.contains('active')) {
+        faqText.style.maxHeight = faqText.scrollHeight + 'px'; 
+      } else {
+        faqText.style.maxHeight = 0; 
+      }
+    }
   }
-}
-
-ulElement.addEventListener('click', handleCardClick);
+  
+  ulElement.addEventListener('click', handleCardClick);
 
 const styleElement = document.createElement('style');
+
 styleElement.textContent = `
-  .faq-icon {
-    width: 5px;
-    height: 10px;
-    top: 12.5px;
-    left: 15px;
-    border: 2px solid;
-    border-radius: 100px;
-    fill: #FAFAFA; 
-    transform: rotate(90deg); 
-  }
-  .faq-text {
-    display: none;
-}`;
-styleElement.textContent = `
-  @media screen and (min-width: 768px) and (max-width: 1280px) {
-    // .faq-container {
-    //   padding-bottom: 96px;
-    // }
-    // .faq {
-    //   padding: 32px 0 26px;
-    // }
-  }
   @media screen and (min-width: 1280px) {
     .faq-container {
       display: grid;

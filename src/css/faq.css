@@ -2,7 +2,22 @@
     overflow-x: hidden;
     scroll-behavior: smooth;
 }
+.faq-text {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-out, padding 0.5s ease-out;
+}
 
+.faq.active .faq-text {
+  max-height: 100vh; 
+}
+.faq-icon {
+  transition: transform 0.3s ease;
+}
+
+.faq.active .faq-icon {
+  transform: rotate(180deg); 
+}
 /* Mobile-first */
 .faq {
     position: relative;
@@ -10,22 +25,6 @@
     border-top: 1px solid #FAFAFA; 
     border-bottom: 1px solid #FAFAFA; 
   }
-
-  /* .faq-toggle {
-    position: absolute;
-    top: 10px; 
-    right: 10px; 
-    width: 40px;
-    height: 40px;
-    border: 1px;
-    border-radius: 100px;
-    padding: 1px 7px;
-    color: #FAFAFA;
-    font-size: 25px;
-    font-weight: 600;
-    text-align: center;
-    transition: transform .5s ease-in-out;
-  } */
 
   .title-faq{
     font-size: 16px;
@@ -35,10 +34,6 @@
     color: #FAFAFA;
     padding-bottom: 32px;
   }
-/* 
-  .faq-container{
-    padding-bottom: 64px;
-  } */
 
   .question{
     padding: 20px 0 16px;
@@ -62,9 +57,7 @@
     .show-tablet {
       display: block;
     }
-    /* .faq-container{
-        padding-bottom: 96px;
-    } */
+
     .question{
         padding: 32px 0 26px;
     }
@@ -73,36 +66,12 @@
     }
 }
 
-
 /* Desktop */
 @media screen and (min-width: 1280px) {
     .show-tablet {
       display: none;
     }
-    /* .faq-container{
-        padding-bottom: 164px;
-    } */
-    /* .faq-container {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
-        grid-template-areas: 
-        "item-1 item-2"
-        "item-3 item-4"
-        "item-5 item-6";
-        gap: 0; 
-        position: relative; 
-        width: 100%;
-      } */
-      /* .faq-container::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 50%;
-        width: 1px;
-        background-color: #FAFAFA;
-      } */
+    
       .faq-container .faq {
         padding: 0 32px; 
         /* border-bottom: 1px solid #FAFAFA;  */
