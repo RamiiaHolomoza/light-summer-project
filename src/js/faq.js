@@ -135,3 +135,4 @@ styleElement.textContent = `
   }
 `;
 document.head.appendChild(styleElement);
+import 'accordion-js/dist/accordion.min.css';
