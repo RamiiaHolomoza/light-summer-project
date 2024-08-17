@@ -10,6 +10,9 @@ const swiper = new Swiper('.swiper', {
     nextEl: '.custom-button-next',
     prevEl: '.custom-button-prev',
   },
+  on: {
+    slideChange: btnDisable,
+  },
 });
 
 function btnDisable() {
@@ -17,10 +20,6 @@ function btnDisable() {
   const btnPrev = document.querySelector('.custom-button-prev');
   const totalSlideAmount = swiper.slides.length;
   const activeSlideIndex = swiper.activeIndex;
-
-  console.log(
-    `Active Slide Index: ${activeSlideIndex}, Total Slides: ${totalSlideAmount}`
-  );
 
   if (activeSlideIndex === totalSlideAmount - 1) {
     btnNext.disabled = true;
