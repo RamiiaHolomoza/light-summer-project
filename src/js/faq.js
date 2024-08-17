@@ -45,6 +45,7 @@ const questions = [
        text:
        'The terms of project implementation depend to a large extent on a number of factors, such as the scope of the project, its complexity, and the availability of resources. Determining exact deadlines is a difficult task, and it usually occurs during the planning phase of the project.',
        },
+
        {svgroot:
         './img/icons.svg#icon-arrow-down' ,
        topic:
@@ -65,8 +66,8 @@ const questions = [
              <svg class="faq-icon" style="position: absolute; top: 10px; right: 10px; width: 40px; height: 40px; border: 1px solid; border-radius: 100px; color: #FAFAFA;">
             <use href="${svgroot}"></use>
           </svg>
-            <h3 class="question">${topic}</h3>
-            <p class="faq-text">${text}</p>
+            <h3 class="question" style="font-size: 20px; font-weight: 600; line-height: 1.5; letter-spacing: -0.02em;">${topic}</h3>
+            <p class="faq-text" style="padding-bottom: 24px; font-size: 16px; font-weight: 500; line-height: 1.5; letter-spacing: -0.02em;">${text}</p>
           </li>`
       )
       .join('');
@@ -101,7 +102,13 @@ styleElement.textContent = `
     display: none;
 }`;
 styleElement.textContent = `
-
+  @media screen and (min-width: 768px) and (max-width: 1280px) {
+    .faq-container {
+      padding-bottom: 96px;
+    }
+    // .faq {
+    //   padding: 32px 0 26px;
+    // }
   }
   @media screen and (min-width: 1280px) {
     .faq-container {
@@ -126,6 +133,21 @@ styleElement.textContent = `
     }
     .faq:nth-child(odd) {
       padding-left: 0;
+    }
+    .faq h3 {
+      padding-top: 32px;
+      padding-bottom: 26px;
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 1.5;
+      letter-spacing: -0.02em;
+    }
+    .faq p {
+      padding-bottom: 26px;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 1.5;
+      letter-spacing: -0.02em;
     }
   }
 `;

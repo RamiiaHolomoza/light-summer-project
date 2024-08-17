@@ -35,10 +35,10 @@
     color: #FAFAFA;
     padding-bottom: 32px;
   }
-
+/* 
   .faq-container{
     padding-bottom: 64px;
-  }
+  } */
 
   .question{
     padding: 20px 0 16px;
@@ -62,9 +62,9 @@
     .show-tablet {
       display: block;
     }
-    .faq-container{
+    /* .faq-container{
         padding-bottom: 96px;
-    }
+    } */
     .question{
         padding: 32px 0 26px;
     }
@@ -79,9 +79,9 @@
     .show-tablet {
       display: none;
     }
-    .faq-container{
+    /* .faq-container{
         padding-bottom: 164px;
-    }
+    } */
     /* .faq-container {
         display: grid;
         grid-template-columns: 1fr 1fr;
