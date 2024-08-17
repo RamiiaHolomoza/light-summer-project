@@ -10,9 +10,10 @@ const swiper = new Swiper('.swiper', {
     nextEl: '.custom-button-next',
     prevEl: '.custom-button-prev',
   },
+  on: {
+    slideChange: btnDisable, // Call btnDisable on slide change
+  },
 });
-
-// Log the values of activeSlideIndex and totalSlideAmount
 
 function btnDisable() {
   const btnNext = document.querySelector('.custom-button-next');
@@ -40,7 +41,5 @@ function btnDisable() {
     btnPrev.classList.remove('nav-button-disabled');
   }
 }
-
-swiper.on('toEdge', btnDisable);
 
 btnDisable();
