@@ -6,7 +6,7 @@ new Accordion('.faq-container');
 const questions = [
     {
   svgroot:
-   './img/icons.svg#icon-arrow-down' ,
+   './img/icons.svg#icon-Icon-bottom' ,
   topic:
   'What programming languages ​​are most often used in your project?',
   text:
@@ -14,7 +14,7 @@ const questions = [
   },
     {
   svgroot:
-   './img/icons.svg#icon-arrow-down' ,
+   './img/icons.svg#icon-Icon-bottom' ,
   topic:
   'What are the deadlines for the project?',
   text:
@@ -23,7 +23,7 @@ const questions = [
 
   {
     svgroot:
-     './img/icons.svg#icon-arrow-down' ,
+     './img/icons.svg#icon-Icon-bottom' ,
     topic:
     'What payment methods do you accept?',
     text:
@@ -31,7 +31,7 @@ const questions = [
     },
 
     {svgroot:
-     './img/icons.svg#icon-arrow-down' ,
+     './img/icons.svg#icon-Icon-bottom' ,
     topic:
     'How can I contact you?',
     text:
@@ -39,7 +39,7 @@ const questions = [
     },
 
     {svgroot:
-        './img/icons.svg#icon-arrow-down' ,
+        './img/icons.svg#icon-Icon-bottom' ,
        topic:
        'Do you provide advice or support?',
        text:
@@ -47,7 +47,7 @@ const questions = [
        },
 
        {svgroot:
-        './img/icons.svg#icon-arrow-down' ,
+        './img/icons.svg#icon-Icon-bottom' ,
        topic:
        'What does the process of developing a software product look like from idea to implementation?',
        text:
@@ -62,8 +62,8 @@ const questions = [
     return questions
       .map(
         ({ svgroot, topic, text }, index) => `
-          <li class="faq" style="position: relative; padding-right: 50px; ${index !== questions.length - 1 ? 'border-bottom: 1px solid #FAFAFA;' : ''}">
-             <svg class="faq-icon" style="position: absolute; top: 32px; right: 10px; width: 40px; height: 40px; border: 1px solid; border-radius: 100px;">
+          <li class="faq" style="position: relative; padding-right: 50px; ${index !== questions.length - 1 ? 'border-bottom: 1px solid rgba(250, 250, 250, 0.2);' : ''}">
+             <svg class="faq-icon" style="position: absolute; top: 32px; right: 20px; width: 40px; height: 40px; border: 1px solid; border-radius: 100px;">
             <use href="${svgroot}"></use>
           </svg>
             <h3 class="question" style="font-size: 20px; font-weight: 600; line-height: 1.5; letter-spacing: -0.02em;">${topic}</h3>
@@ -108,11 +108,11 @@ styleElement.textContent = `
       bottom: 0;
       left: 50%;
       width: 1px;
-      background-color: #FAFAFA;
+      background-color: rgba(250, 250, 250, 0.2); ;
     }
     .faq {
       padding: 0 32px;
-      border-bottom: 1px solid #FAFAFA;
+      border-bottom: 1px solid rgba(250, 250, 250, 0.2);
     }
     .faq:nth-child(odd) {
       padding-left: 0;
