@@ -1,9 +1,4 @@
 
-// import { createCardMarkup,  handleCardClick } from '../js/benefits';
-
-
-
-
 const benefitsCards = [
   {
 svgroot:
