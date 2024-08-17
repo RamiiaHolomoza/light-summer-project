@@ -1,51 +1,33 @@
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-.section-covers {
-  position: relative;
-}
-
 .container-covers {
-  display: flex;
-  justify-content: center;
-  min-width: 320px;
-  height: 508px;
-
-  position: absolute;
-
-  left: 0;
-  overflow: hidden;
-
-  background-image: url('../img/covers/bg-covers.png');
-  background-color: #1c1d20;
+  background-image: url('../img/cover/elements-blue-1x.png');
+  background-color: #242527;
   background-repeat: no-repeat;
   background-size: 1018px 784px;
+  height: 508px;
 }
 
 @media (min-resolution: 192dpi) {
   .container-covers {
-    background-image: url('../img/covers/bg-covers-retina.png');
+    background-image: url('../img/covers/elements-blue-2x.png');
   }
 }
-
-@media screen and (min-width: 768px) {
+/*
+@media screen and (min-width: 320px) and (max-width: 374px) {
   .container-covers {
-    background-size: 1288px 1004px;
-    height: 960px;
+    background-size: cover;
+    background-position: right 0;
   }
+}*/
+
+.covers-content {
+  position: relative;
 }
 
-@media screen and (min-width: 1440px) {
-  .container-covers {
-    background-size: 1528px 1064px;
-  }
-}
-
-.covers-title {
-  display: none;
+.covers-wrap {
+  position: absolute;
+  right: 0px;
+  left: 0;
+  overflow: hidden;
 }
 
 .covers-list {
@@ -60,7 +42,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: calc(100% / 10);
+  width: calc(100% / 6);
   white-space: nowrap;
   animation-name: marqueeLine;
   animation-duration: 5s;
@@ -82,3 +64,39 @@
   width: 282px;
 }
 */
+@media screen and (min-width: 768px) {
+  .container-covers {
+    background-image: url('../img/cover/elements-blue-1x.png');
+    background-size: 1288px 1004px;
+    background-position: top -115px left -364px;
+    height: 960px;
+  }
+
+  @media (min-resolution: 192dpi) {
+    .container-covers {
+      background-image: url('../img/cover/elements-blue-2x.png');
+    }
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .container-covers {
+    background-image: url('../img/cover/elements-blue-1x.png');
+    background-size: 1528px 1064px;
+    background-position: top -75px left -37px;
+    height: 960px;
+  }
+
+  @media (min-resolution: 192dpi) {
+    .container-covers {
+      background-image: url('../img/cover/elements-blue-2x.png');
+    }
+  }
+
+  .covers-wrap {
+    position: absolute;
+    right: -800px;
+    left: 0;
+    overflow: hidden;
+  }
+}
