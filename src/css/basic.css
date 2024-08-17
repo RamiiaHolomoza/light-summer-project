@@ -27,10 +27,7 @@
     width: 375px;
     padding: 0 16px;
     margin: 0 auto;
-}
-
-.container:nth-last-child() {
-    margin-bottom: 64px;
+    margin-top: 64px;
 }
 
 @media screen and (min-width: 320px) and (max-width: 374px) {
@@ -44,12 +41,14 @@
     .container {
         width: 768px;
         padding: 0 32px;
+        margin-top: 96px;
     }
 }
 
 @media screen and (min-width: 1440px) {
     .container {
         width: 1440px;
+        margin-top: 164px;
     }
 
     .container:nth-last-child() {

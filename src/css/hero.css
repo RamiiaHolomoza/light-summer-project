@@ -1,14 +1,5 @@
-/* .section-hero{} */
-/* body {
-    background-image: url('path-to-your-image.png'); */
-    /* шлях до вашого зображення */
-    /* background-size: cover; */
-    /* змінює розмір зображення, щоб повністю покрити весь фон */
-    /* background-repeat: no-repeat; */
-    /* забороняє повторювати зображення */
-    /* background-position: center; */
-    /* вирівнює зображення по центру */
-/* } */
+
+
 .container-hero{
     min-width: 320px;
     padding-top: 281px;
@@ -16,13 +7,13 @@
     display: flex;
     flex-direction: column;
     gap: 218px;
+    margin-top: 0;
     
 
     background-image: url('../img/hero/hero-blue-mob-1x.png');
     background-repeat: no-repeat;
     background-size: 578px 812px; 
     background-position: -268px 0px;
-    /* 728 1024 */
 }
 
 @media (min-resolution: 192dpi) {
@@ -73,8 +64,30 @@
     border: 1px solid #fafafa;
 }
 
+@media screen and (min-width: 320px) and (max-width: 374px) {
+    .container-hero {
+        background-size: cover;
+        background-position: right 0;
+        min-height: 100vh;
+    }
 
-/* @media screen and (min-width: 320px) and (max-width: 374px) {} */
+    .hero-list {
+        justify-content: center;
+    }
+
+    .hero-list-item:not(:last-child) {
+        width: 30px;
+        height: 30px;
+    }
+
+    .hero-list-item:last-child {
+        padding: 7px 10px;
+    }
+
+    .hero-list-link {
+        font-size: 12px;
+    }
+}
 
 @media screen and (min-width: 768px) {
     .container-hero {
