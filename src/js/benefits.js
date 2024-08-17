@@ -2,7 +2,7 @@
 const benefitsCards = [
   {
 svgroot:
- '../img/icons.svg#icon-user-01',
+ './img/icons.svg#icon-user-01',
 topic:
 'Expertise',
 text:
@@ -10,7 +10,7 @@ text:
 },
   {
 svgroot:
- '../img/icons.svg#icon-message-chat-circle',
+ './img/icons.svg#icon-message-chat-circle',
 topic:
 'Communication',
 text:
@@ -18,7 +18,7 @@ text:
     },
   {
 svgroot:
- '../img/icons.svg#icon-brush-01',
+ './img/icons.svg#icon-brush-01',
 topic:
 'Art',
 text:
@@ -26,7 +26,7 @@ text:
     },
   {
 svgroot:
- '../img/icons.svg#icon-hourglass-02' ,
+ './img/icons.svg#icon-hourglass-02' ,
 topic:
 'Urgent execution',
 text:
