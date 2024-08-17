@@ -1,0 +1,102 @@
+.container-covers {
+  background-image: url('../img/cover/elements-blue-1x.png');
+  background-color: #242527;
+  background-repeat: no-repeat;
+  background-size: 1018px 784px;
+  height: 508px;
+}
+
+@media (min-resolution: 192dpi) {
+  .container-covers {
+    background-image: url('../img/covers/elements-blue-2x.png');
+  }
+}
+/*
+@media screen and (min-width: 320px) and (max-width: 374px) {
+  .container-covers {
+    background-size: cover;
+    background-position: right 0;
+  }
+}*/
+
+.covers-content {
+  position: relative;
+}
+
+.covers-wrap {
+  position: absolute;
+  right: 0px;
+  left: 0;
+  overflow: hidden;
+}
+
+.covers-list {
+  height: 100vh;
+  display: flex;
+  transform: rotate(16deg);
+}
+
+.covers-project {
+  margin-right: 10px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: calc(100% / 6);
+  white-space: nowrap;
+  animation-name: marqueeLine;
+  animation-duration: 5s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+@keyframes marqueeLine {
+  from {
+    transform: translateX(-20%);
+  }
+
+  to {
+    transform: translateX(-180%);
+  }
+}
+
+/*
+.covers-img {
+  width: 282px;
+}
+*/
+@media screen and (min-width: 768px) {
+  .container-covers {
+    background-image: url('../img/cover/elements-blue-1x.png');
+    background-size: 1288px 1004px;
+    background-position: top -115px left -364px;
+    height: 960px;
+  }
+
+  @media (min-resolution: 192dpi) {
+    .container-covers {
+      background-image: url('../img/cover/elements-blue-2x.png');
+    }
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .container-covers {
+    background-image: url('../img/cover/elements-blue-1x.png');
+    background-size: 1528px 1064px;
+    background-position: top -75px left -37px;
+    height: 960px;
+  }
+
+  @media (min-resolution: 192dpi) {
+    .container-covers {
+      background-image: url('../img/cover/elements-blue-2x.png');
+    }
+  }
+
+  .covers-wrap {
+    position: absolute;
+    right: -800px;
+    left: 0;
+    overflow: hidden;
+  }
+}
