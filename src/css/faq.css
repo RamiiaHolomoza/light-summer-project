@@ -1,0 +1,133 @@
+.cont-faq{
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+
+}
+.faq-container{
+overflow-y: hidden;
+}
+.faq-text {
+height: 0 ;
+display: none;
+overflow: hidden;
+transition: all 0.5s ease-out;
+padding-bottom: 20px;
+}
+
+.faq.active .faq-text {
+max-height: 100vh; 
+display: block;
+height: 100%;
+}
+.faq-icon {
+margin-left: 10px;
+transition: transform 0.1ms ease;
+}
+/* .faq-icon path {
+stroke: white; 
+} */
+
+.faq h3 {
+max-width: 600px;
+}
+
+.faq.active .faq-icon {
+transform: rotate(180deg); 
+}
+
+/* Mobile-first */
+.faq {
+  position: relative;
+  /* padding-right: 50px;  */
+  border-top: 1px solid rgba(250, 250, 250, 0.2); 
+  border-bottom: 1px solid rgba(250, 250, 250, 0.2); 
+}
+
+.title-faq{
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+  color: #FAFAFA;
+  padding-bottom: 32px;
+}
+
+.question{
+  padding: 20px 0 16px;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+  color: #FAFAFA;
+}
+.faq-text{
+  padding-bottom: 24px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+  color: #FAFAFA;
+}
+
+/* Tablet */
+@media screen and (min-width: 768px) and (max-width: 1280px) {
+  .show-tablet {
+    display: block;
+  }
+
+  .faq-icon {
+    max-width: 30px;
+    max-height: 30px; 
+  }
+  .faq .faq-icon {
+    top: 32px !important
+  }
+  
+  .question{
+      padding: 32px 0 26px;
+  }
+  .faq-text{
+    padding-bottom: 26px;
+  }
+}
+
+/* Desktop */
+@media screen and (min-width: 1280px) {
+  .show-tablet {
+    display: none;
+  }
+
+    .faq-container .faq {
+      padding: 0 32px; 
+    }  
+    .faq-container .faq:nth-child(odd) {
+      padding-left: 0;
+  }
+  .question {
+      padding: 32px 0 26px;
+  }
+  .faq .faq-icon {
+    top: 32px !important
+  }
+  .faq-text{
+    padding-bottom: 26px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+.question {
+  padding: 20px 0 16px;
+}
+.faq-icon {
+  max-width: 30px;
+  max-height: 30px; 
+}
+
+.faq .faq-icon {
+  top: 20px !important
+}
+.cont-faq.container {
+  max-width: 100%;
+  width: 100%;
+}
+}
