@@ -70,7 +70,7 @@ transform: rotate(180deg);
 }
 
 /* Tablet */
-@media screen and (min-width: 768px) and (max-width: 1280px) {
+@media screen and (min-width: 768px) {
   .show-tablet {
     display: block;
   }
@@ -92,7 +92,7 @@ transform: rotate(180deg);
 }
 
 /* Desktop */
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 1440px) {
   .show-tablet {
     display: none;
   }

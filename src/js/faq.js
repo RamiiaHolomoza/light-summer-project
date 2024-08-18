@@ -94,7 +94,7 @@ const questions = [
 const styleElement = document.createElement('style');
 
 styleElement.textContent = `
-  @media screen and (min-width: 1280px) {
+  @media screen and (min-width: 1440px) {
     .faq-container {
       display: grid;
       grid-template-columns: 1fr 1fr;
