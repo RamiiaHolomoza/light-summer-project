@@ -62,12 +62,12 @@ const questions = [
     return questions
       .map(
         ({ svgroot, topic, text }, index) => `
-          <li class="faq" style="position: relative; padding-right: 50px; ${index !== questions.length - 1 ? 'border-bottom: 1px solid rgba(250, 250, 250, 0.2);' : ''}">
+          <li class="faq" style="position: relative; ${index !== questions.length - 1 ? 'border-bottom: 1px solid rgba(250, 250, 250, 0.2);' : ''}">
              <svg class="faq-icon" style="position: absolute; top: 32px; right: 20px; width: 40px; height: 40px; border: 1px solid; border-radius: 100px;">
             <use href="${svgroot}"></use>
           </svg>
             <h3 class="question" style="font-size: 20px; font-weight: 600; line-height: 1.5; letter-spacing: -0.02em;">${topic}</h3>
-            <p class="faq-text" style="padding-bottom: 24px; font-size: 16px; font-weight: 500; line-height: 1.5; letter-spacing: -0.02em;">${text}</p>
+            <p class="faq-text" style="font-size: 16px; font-weight: 500; line-height: 1.5; letter-spacing: -0.02em;">${text}</p>
           </li>`
       )
       .join('');
