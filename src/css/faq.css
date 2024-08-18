@@ -118,9 +118,7 @@
     max-width: 30px;
     max-height: 30px; 
   }
-  .faq.active .faq-text {
-    /* padding: 0px 0px 0px 20px; */
-  }
+
   .faq .faq-icon {
     top: 20px !important
   }
