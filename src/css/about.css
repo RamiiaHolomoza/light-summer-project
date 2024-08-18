@@ -50,6 +50,10 @@
     gap: 32px;
     min-width: 320px;
   }
+.main-content-item {
+  width: 320px;
+}
+  
 }
 @media screen and (min-width: 768px) {
   .container {

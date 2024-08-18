@@ -69,6 +69,7 @@
         background-size: cover;
         background-position: right 0;
         min-height: 100vh;
+        margin-top: 0;
     }
 
     .hero-list {
@@ -96,6 +97,7 @@
 
             background-size: 728px 1024px; 
             background-position: -257px 0px;
+            margin-top: 0;
         }
     
     
@@ -125,6 +127,7 @@
 
 @media screen and (min-width: 1440px) {
     .container-hero {
+        margin-top: 0;
         gap: 243px;
 
         background-image: url('../img/hero/hero-blue-1x.png');
