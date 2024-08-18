@@ -1,12 +1,9 @@
-<<<<<<< HEAD
 /*.main-content {
   position: absolute;
   display: inline-block;
   justify-content: center;
-=======
 .main-content-about-me {
   display: flex;
->>>>>>> 5f3d45b82fe649add5bca5de0d5b4e0f4b122731
   flex-direction: column;
   gap: 32px;
 }
@@ -16,13 +13,10 @@
   flex-direction: column;
   background: #1c1d20;
   gap: 16px;
-<<<<<<< HEAD
 }*/
 .container-title {
-=======
 }
 .main-content-item {
->>>>>>> 5f3d45b82fe649add5bca5de0d5b4e0f4b122731
   width: 343px;
   height: 500px;
   background: #242527;
