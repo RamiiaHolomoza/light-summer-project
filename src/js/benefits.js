@@ -1,8 +1,8 @@
-
+import sprite from '../img/icons.svg';
 const benefitsCards = [
   {
 svgroot:
- '../img/icons.svg#icon-user-01',
+  `${sprite}#icon-user-01`,
 topic:
 'Expertise',
 text:
@@ -10,7 +10,7 @@ text:
 },
   {
 svgroot:
- '../img/icons.svg#icon-message-chat-circle',
+  `${sprite}#icon-message-chat-circle`,
 topic:
 'Communication',
 text:
@@ -18,15 +18,15 @@ text:
     },
   {
 svgroot:
- '../img/icons.svg#icon-brush-01',
+  `${sprite}#icon-brush-01`,
 topic:
 'Art',
 text:
 'Thanks to my creative nature, I am ready to accept challenges and help you bring your ideas to life. ',
     },
   {
-svgroot:
- '../img/icons.svg#icon-hourglass-02' ,
+    svgroot:
+      `${sprite}#icon-hourglass-02`,
 topic:
 'Urgent execution',
 text:
