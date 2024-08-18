@@ -75,7 +75,7 @@ function updateNavigationState(perView) {
 }
 
 export const swiper = new Swiper('.reviews-slider', {
-  slidesPerView: 4, // Default for large screens
+  slidesPerView: 4,
   spaceBetween: 16,
   navigation: {
     nextEl: '.swiper-button-next',
@@ -87,14 +87,14 @@ export const swiper = new Swiper('.reviews-slider', {
   },
   breakpoints: {
     320: {
-      slidesPerView: 1, // Показуємо 1 картку на малих екранах
+      slidesPerView: 1,
     },
     768: {
-      slidesPerView: 2, // Показуємо 2 картки на середніх екранах
+      slidesPerView: 2,
       spaceBetween: 16,
     },
     1440: {
-      slidesPerView: 4, // Показуємо 4 картки на великих екранах
+      slidesPerView: 4,
       spaceBetween: 16,
     },
   },
