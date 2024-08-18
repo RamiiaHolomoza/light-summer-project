@@ -1,11 +1,10 @@
-import Swiper from 'swiper/bundle';
 import axios from 'axios';
+import Swiper from 'swiper';
 
-let startIndex = 0;
-let endIndex = 4;
 let totalReviews = 0;
+let currentSlideIndex = 0;
 
-export async function fetchReviews(start = 0, end = 4) {
+export async function fetchReviews(start = 0, perView = 4) {
   try {
     const response = await axios.get('https://portfolio-js.b.goit.study/api/reviews');
     const reviews = response.data;
@@ -14,9 +13,9 @@ export async function fetchReviews(start = 0, end = 4) {
     if (totalReviews === 0) {
       renderPlaceholder('Not found');
     } else {
-      const limitedReviews = reviews.slice(start, end);
+      const limitedReviews = reviews.slice(start, start + perView);
       renderReviews(limitedReviews);
-      updateNavigationState();
+      updateNavigationState(perView);
     }
   } catch (error) {
     showErrorPopup('Failed to load reviews. Please try again.');
@@ -58,17 +57,17 @@ function showErrorPopup(message) {
   }, 3000);
 }
 
-function updateNavigationState() {
+function updateNavigationState(perView) {
   const prevButton = document.querySelector('.swiper-button-prev');
   const nextButton = document.querySelector('.swiper-button-next');
 
-  if (startIndex === 0) {
+  if (currentSlideIndex === 0) {
     prevButton.classList.add('swiper-button-disabled');
   } else {
     prevButton.classList.remove('swiper-button-disabled');
   }
 
-  if (endIndex >= totalReviews) {
+  if (currentSlideIndex + perView >= totalReviews) {
     nextButton.classList.add('swiper-button-disabled');
   } else {
     nextButton.classList.remove('swiper-button-disabled');
@@ -76,7 +75,7 @@ function updateNavigationState() {
 }
 
 export const swiper = new Swiper('.reviews-slider', {
-  slidesPerView: 4,
+  slidesPerView: 4, // Default for large screens
   spaceBetween: 16,
   navigation: {
     nextEl: '.swiper-button-next',
@@ -86,25 +85,39 @@ export const swiper = new Swiper('.reviews-slider', {
     enabled: true,
     onlyInViewport: true,
   },
+  breakpoints: {
+    320: {
+      slidesPerView: 1, // Показуємо 1 картку на малих екранах
+    },
+    768: {
+      slidesPerView: 2, // Показуємо 2 картки на середніх екранах
+      spaceBetween: 16,
+    },
+    1440: {
+      slidesPerView: 4, // Показуємо 4 картки на великих екранах
+      spaceBetween: 16,
+    },
+  },
   on: {
-    slideChange: updateNavigationState,
+    slideChange: () => updateNavigationState(swiper.params.slidesPerView),
   },
 });
 
 document.querySelector('.swiper-button-next').addEventListener('click', () => {
-  if (endIndex < totalReviews) {
-    startIndex += 1;
-    endIndex += 1;
-    fetchReviews(startIndex, endIndex);
+  const perView = swiper.params.slidesPerView;
+  if (currentSlideIndex + perView < totalReviews) {
+    currentSlideIndex += perView;
+    fetchReviews(currentSlideIndex, perView);
   }
 });
 
 document.querySelector('.swiper-button-prev').addEventListener('click', () => {
-  if (startIndex > 0) {
-    startIndex -= 1;
-    endIndex -= 1;
-    fetchReviews(startIndex, endIndex);
+  const perView = swiper.params.slidesPerView;
+  if (currentSlideIndex > 0) {
+    currentSlideIndex -= perView;
+    fetchReviews(currentSlideIndex, perView);
   }
 });
 
-fetchReviews(startIndex, endIndex);
+const perView = swiper.params.slidesPerView;
+fetchReviews(currentSlideIndex, perView);
