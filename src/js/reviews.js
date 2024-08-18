@@ -1,5 +1,3 @@
-/* import './js/reviews'; */ /* імпорт в main.js*/
-
 import Swiper from 'swiper/bundle';
 import axios from 'axios';
 

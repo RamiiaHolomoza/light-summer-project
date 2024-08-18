@@ -81,12 +81,12 @@
 }
 
 @media screen and (min-width: 1440px) {
-  .container {
+  .container-about-me {
     margin-top: 96px;
   }
 
   .main-content {
-    width: 1440px;
+    width: 100%;
     flex-direction: row;
   }
 
