@@ -108,7 +108,7 @@ export const swiper = new Swiper('.reviews-slider', {
 document.querySelector('.swiper-button-next').addEventListener('click', () => {
   const perView = swiper.params.slidesPerView;
   if (currentSlideIndex + perView < totalReviews) {
-    currentSlideIndex += perView;
+    currentSlideIndex += 1;
     fetchReviews(currentSlideIndex, perView);
   }
 });
@@ -116,11 +116,10 @@ document.querySelector('.swiper-button-next').addEventListener('click', () => {
 document.querySelector('.swiper-button-prev').addEventListener('click', () => {
   const perView = swiper.params.slidesPerView;
   if (currentSlideIndex > 0) {
-    currentSlideIndex -= perView;
+    currentSlideIndex -= 1;
     fetchReviews(currentSlideIndex, perView);
   }
 });
 
 const perView = swiper.params.slidesPerView;
 fetchReviews(currentSlideIndex, perView);
-// fetchReviews(startIndex, endIndex);
