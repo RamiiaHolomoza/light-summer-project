@@ -95,6 +95,5 @@ const questions = [
   ulElement.addEventListener('click', handleCardClick);
 
 const styleElement = document.createElement('style');
-
 document.head.appendChild(styleElement);
 import 'accordion-js/dist/accordion.min.css';
