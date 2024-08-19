@@ -5,6 +5,7 @@ import svgroot from '../img/icons.svg'
 new Accordion('.info-content-list', {
     duration: 300,
     showMultiple: true,
+    openOnInit: [0]
 }); 
 const information = [
     {
@@ -27,8 +28,8 @@ const infoCardEl = document.querySelector('.info-content-list')
 export function createAboutInfoMarkup(information) {
     return information
         .map(
-            ({ title, content }) => `
-        <li class="info-content-item">
+            ({ title, content }, index ) => `
+        <li class="info-content-item ${index === 0 ? 'is-active' : ''}">
         <h3 class="accordion-header info-title-acc"><p>${title}</p><button type="button" class="acc-btn"><svg class="about-acc-icon" width="18" height="18">
             <use href="${svgroot}#icon-Icon-bottom"></use></button></h3>
         <div class="accordion-content info-text-acc">${content}</div>
@@ -40,15 +41,23 @@ export function createAboutInfoMarkup(information) {
 infoCardEl.insertAdjacentHTML('beforeend', createAboutInfoMarkup(information));
 infoCardEl.addEventListener('click', handleAccAboutClick);
 
+const firstLi = document.getElementsByClassName('.acc-btn')
+firstLi.open(1)
+
 export function handleAccAboutClick(event) {
     const button = event.target.closest('.acc-btn');
     if (button) {
         const infoItem = button.closest('.info-content-item');
         const infoText = infoItem.querySelector('.accordion-content');
+        // if (infoItem.classList.contains('active')) {
+        //     infoItem.classList.remove('active');
+        // } else {
+        //     infoItem.classList.add('active');
+        // }
 
-        infoItem.classList.toggle('active');
+        infoItem.classList.toggle('is-active');
 
-        if (infoItem.classList.contains('active')) {
+        if (infoItem.classList.contains('is-active')) {
             infoText.style.maxHeight = infoText.scrollHeight + 'px';
         } else {
             infoText.style.maxHeight = 0;
