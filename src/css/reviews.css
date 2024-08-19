@@ -17,7 +17,8 @@
   width: 344px;
 }
 
-.swiper-wrapper {
+/* .swiper-wrapper { */
+.swiper-wrapper.swiper-rew {
   display: flex;
   box-sizing: content-box;
   gap: 16px;

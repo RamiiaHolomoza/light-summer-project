@@ -42,6 +42,10 @@ infoCardEl.insertAdjacentHTML('beforeend', createAboutInfoMarkup(information));
 infoCardEl.addEventListener('click', handleAccAboutClick);
 
 
+const active = document.querySelector('.info-content-item.is-active .accordion-content')
+active.style.maxHeight = active.scrollHeight + 'px';
+
+
 export function handleAccAboutClick(event) {
     const button = event.target.closest('.acc-btn');
     if (button) {

@@ -1,7 +1,8 @@
 import Swiper from 'swiper/bundle';
-import 'swiper/swiper-bundle.css';
+// import 'swiper/swiper-bundle.css';
 
 const swiper = new Swiper('.swiper', {
+// const swiper = new Swiper('.swiper-projects', {
   direction: 'horizontal',
   pagination: {
     el: '.swiper-pagination',
@@ -15,7 +16,7 @@ const swiper = new Swiper('.swiper', {
   },
 });
 
-function btnDisable() {
+export function btnDisable() {
   const btnNext = document.querySelector('.custom-button-next');
   const btnPrev = document.querySelector('.custom-button-prev');
   const totalSlideAmount = swiper.slides.length;
@@ -39,3 +40,18 @@ function btnDisable() {
 }
 
 btnDisable();
+
+
+// const reviewSection = document.querySelector('.section-reviews')
+//  const swiperStyles = Array.from(document.styleSheets)
+// if (reviewSection) {
+//   swiperStyles.find(sheet => sheet.href && sheet.href.includes('reviews-slider')  )
+// }
+// if (swiperStyles) {
+//   swiperStyles.disabled = true;
+// }
+// swiper-button-prev swiper-button-disabled
+// swiper-initialized swiper-horizontal swiper-backface-hidden
+
+// .swiper-button-prev
+// .swiper-button-next
