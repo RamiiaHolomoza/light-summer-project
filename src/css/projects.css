@@ -137,8 +137,8 @@
 .projects-arrow-svg {
   display: block;
 }
-
-.nav-button-disabled {
+.custom-button-prev.swiper-button-disabled, 
+.custom-button-next.swiper-button-disabled {
   fill: white;
   background-color: transparent;
   padding: 14px;

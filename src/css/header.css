@@ -96,9 +96,9 @@ color: var(--main-text);
 .nav-link:focus {
   color: #747bff;
 }
- button {
+ /* button {
   all: unset;
- }
+ } */
 
  .icon-burger {
   fill: var(--main-text);
