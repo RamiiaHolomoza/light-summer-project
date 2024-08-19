@@ -75,7 +75,7 @@ const swiperAbout = new Swiper('.skilla-about-swiper', {
     loop: true, // нескінченний цикл
 
     navigation: {
-    nextEl: '.swiper-button-next',
+    nextEl: '.swiper-button-next-ab',
     },
     
   pagination: {

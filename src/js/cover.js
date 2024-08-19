@@ -7,12 +7,18 @@ export function handleScroll() {
     const elementRect = targetElement.getBoundingClientRect();
     const elementTop = elementRect.top;
 
-    if (elementTop < windowHeight * 0.5) {
+
+    if (elementTop < windowHeight * 0.9) {
       // eлемент знаходиться у середині viewport користувача
       targetAnimation[i].classList.add('covers-animation'); // Додаємо класс с анимацією на li
     } else {
       targetAnimation[i].classList.remove('covers-animation');
     }
+
+    // if (elementTop < windowHeight * 0.001) {
+    //   targetAnimation[i].classList.remove('covers-animation');
+    // }
+      //Треба якось зміститися ще нижче щоб зупинялась анімація 
   }
 }
 window.addEventListener('scroll', handleScroll);
