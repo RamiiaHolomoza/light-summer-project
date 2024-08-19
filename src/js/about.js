@@ -47,11 +47,6 @@ export function handleAccAboutClick(event) {
     if (button) {
         const infoItem = button.closest('.info-content-item');
         const infoText = infoItem.querySelector('.accordion-content');
-        // if (infoItem.classList.contains('active')) {
-        //     infoItem.classList.remove('active');
-        // } else {
-        //     infoItem.classList.add('active');
-        // }
 
         infoItem.classList.toggle('is-active');
 
