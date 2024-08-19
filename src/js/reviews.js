@@ -23,8 +23,8 @@ export async function fetchReviews(start = 0, perView = 4) {
 }
 
 function renderReviews(reviews) {
-  const swiperWrapper = document.querySelector('.swiper-wrapper');
-  // const swiperWrapper = document.querySelector('.swiper-wrapper.swiper-rew');
+  // const swiperWrapper = document.querySelector('.swiper-wrapper');
+  const swiperWrapper = document.querySelector('.swiper-wrapper.swiper-rew');
   swiperWrapper.innerHTML = '';
   reviews.forEach(review => {
     const slide = document.createElement('li');
@@ -42,8 +42,8 @@ function renderReviews(reviews) {
 }
 
 function renderPlaceholder(message) {
-  const swiperWrapper = document.querySelector('.swiper-wrapper');
-  // const swiperWrapper = document.querySelector('.swiper-wrapper.swiper-rew');
+  // const swiperWrapper = document.querySelector('.swiper-wrapper');
+  const swiperWrapper = document.querySelector('.swiper-wrapper.swiper-rew');
   const placeholder = document.createElement('li');
   placeholder.classList.add('swiper-slide', 'review-item');
   placeholder.textContent = message;
