@@ -1,5 +1,7 @@
 import Accordion from 'accordion-js';
 import 'accordion-js/dist/accordion.min.css';
+import Swiper from 'swiper';
+import { Navigation, Pagination } from 'swiper/modules';
 import svgroot from '../img/icons.svg' 
 
 new Accordion('.info-content-list', {
@@ -61,3 +63,46 @@ export function handleAccAboutClick(event) {
         }
     }
 }
+
+
+const swiperContainerAb = document.getElementsByClassName('skills-content-list');
+
+const swiperAbout = new Swiper('.skilla-about-swiper', {
+    slidesPerView: 6,
+    slidesPerGroup: 1,
+    spaceBetween: 0,
+    modules: [Navigation, Pagination],
+    loop: true, // нескінченний цикл
+
+    navigation: {
+    nextEl: '.swiper-button-next',
+    },
+    
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+    },
+  
+  breakpoints: {
+    320: {
+      slidesPerView: 2,
+    },
+    768: {
+      slidesPerView: 3,
+    },
+    1440: {
+      slidesPerView: 6,
+    },
+    },
+});
+
+// const slideItems = document.getElementsByClassName('swiper-slide slide-item-ab');
+const slideItems = document.getElementsByClassName('.skills-content-list.swiper-wrapper .swiper-slide.slide-item-ab');
+
+Array.from(slideItems).forEach(slideItem => {
+    // slideItem.style.removeProperty('width');
+    slideItem.removeAttribute('style');
+    slideItem.classList.add('new-width-class-item-ab');
+});
+
+swiperAbout.update();

@@ -107,13 +107,62 @@ border: 1px solid #fafafa;
   transition: max-height 0.3s ease-out;
 }
 
-.accordion-content .active {
-  /* max-height: 100%; */
-  
-}
-
 .rotate180 {
   transform: rotate(180deg);
+}
+
+.skilla-about-swiper.swiper-initialized.swiper-horizontal.swiper-backface-hidden {
+  display: flex;
+  /* position: relative; */
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    /* max-width: 600px; */
+    /* Встановлюємо ширину контейнера */
+    overflow: hidden;
+    /* gap: 55px; */
+}
+
+.skills-content-list.swiper-wrapper {
+    display: flex;
+    position: relative;
+    width: 260px;
+    /* width: calc(100% / 3 *2); */
+    height: 100%;
+}
+
+.skills-content-list.swiper-wrapper .swiper-slide.slide-item-ab{
+    width: 130px;
+    height: 130px;
+}
+
+
+.swiper-slide.slide-item-ab {
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: 100%;
+  border: 1px solid rgba(250, 250, 250, 0.2);
+  background-color: transparent;
+  margin: 0;
+}
+
+.swiper-slide.slide-item-ab.swiper-slide-active{
+  background-color: #0041E8;
+  border: none;
+}
+
+.skilla-about-swiper .swiper-button-next{
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  gap: 0;
+  border: none;
+}
+.new-width-class-item-ab{
+  width: 130px;
 }
 
 @media screen and (min-width: 320px) and (max-width: 374px) {
@@ -162,7 +211,23 @@ border: 1px solid #fafafa;
 .info-content-item::after {
   margin-top: 20px;
 }
+
+.skills-content-list.swiper-wrapper {
+  width: 600px;
 }
+
+.skills-content-list.swiper-wrapper .swiper-slide.slide-item-ab {
+  width: 200px;
+  height: 200px;
+}
+
+.skilla-about-swiper .swiper-button-next {
+  width: 40px;
+  height: 40px;
+}
+}
+
+
 
 @media screen and (min-width: 1440px) {
   .container-about-me {
@@ -185,5 +250,7 @@ padding-right: 68px;
 .info-content-item::after {
   margin-top: 24px;
 }
-
+.skills-content-list.swiper-wrapper {
+  width: 1200px;
+}
 }
