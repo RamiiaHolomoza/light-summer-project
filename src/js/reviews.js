@@ -7,7 +7,9 @@ let totalReviews = 0;
 
 export async function fetchReviews(start = 0, end = 4) {
   try {
-    const response = await axios.get('https://portfolio-js.b.goit.study/api/reviews');
+    const response = await axios.get(
+      'https://portfolio-js.b.goit.study/api/reviews'
+    );
     const reviews = response.data;
     totalReviews = reviews.length;
 
