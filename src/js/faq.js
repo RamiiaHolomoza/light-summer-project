@@ -1,12 +1,14 @@
 import Accordion from 'accordion-js';
 import 'accordion-js/dist/accordion.min.css';
+import svgrootBasis from '../img/icons.svg' 
+
 export {questions, ulElement, createFAQMarkup, styleElement};
 
 new Accordion('.faq-container');
 const questions = [
     {
   svgroot:
-   './img/icons.svg#icon-Icon-bottom' ,
+   '#icon-Icon-bottom' ,
   topic:
   'What programming languages ​​are most often used in your project?',
   text:
@@ -14,7 +16,7 @@ const questions = [
   },
     {
   svgroot:
-   './img/icons.svg#icon-Icon-bottom' ,
+   '#icon-Icon-bottom' ,
   topic:
   'What are the deadlines for the project?',
   text:
@@ -23,7 +25,7 @@ const questions = [
 
   {
     svgroot:
-     './img/icons.svg#icon-Icon-bottom' ,
+     '#icon-Icon-bottom' ,
     topic:
     'What payment methods do you accept?',
     text:
@@ -31,7 +33,7 @@ const questions = [
     },
 
     {svgroot:
-     './img/icons.svg#icon-Icon-bottom' ,
+     '#icon-Icon-bottom' ,
     topic:
     'How can I contact you?',
     text:
@@ -39,7 +41,7 @@ const questions = [
     },
 
     {svgroot:
-        './img/icons.svg#icon-Icon-bottom' ,
+        '#icon-Icon-bottom' ,
        topic:
        'Do you provide advice or support?',
        text:
@@ -47,7 +49,7 @@ const questions = [
        },
 
        {svgroot:
-        '../img/icons.svg#icon-Icon-bottom' ,
+        '#icon-Icon-bottom' ,
        topic:
        'What does the process of developing a software product look like from idea to implementation?',
        text:
@@ -66,7 +68,7 @@ const questions = [
             <div class="faq-list-up">
                <h3 class="question">${topic}</h3>
                  <svg class="faq-icon">
-                   <use href="${svgroot}"></use>
+                   <use href="${svgrootBasis}${svgroot}"></use>
                 </svg>
            </div>
           <p class="faq-text">${text}</p>
