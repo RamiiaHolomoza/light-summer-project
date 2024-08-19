@@ -2,7 +2,13 @@ import Accordion from 'accordion-js';
 import 'accordion-js/dist/accordion.min.css';
 export {questions, ulElement, createFAQMarkup, styleElement};
 
-new Accordion('.faq-container');
+new Accordion('.faq-container', {
+  duration: 400, 
+  ariaEnabled: true,
+  showMultiple: false, 
+  collapse: true 
+});
+
 const questions = [
     {
   svgroot:
