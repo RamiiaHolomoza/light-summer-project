@@ -41,8 +41,6 @@ export function createAboutInfoMarkup(information) {
 infoCardEl.insertAdjacentHTML('beforeend', createAboutInfoMarkup(information));
 infoCardEl.addEventListener('click', handleAccAboutClick);
 
-const firstLi = document.getElementsByClassName('.acc-btn')
-firstLi.open(1)
 
 export function handleAccAboutClick(event) {
     const button = event.target.closest('.acc-btn');
