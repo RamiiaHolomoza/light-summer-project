@@ -47,7 +47,7 @@ const questions = [
        },
 
        {svgroot:
-        './img/icons.svg#icon-Icon-bottom' ,
+        '../img/icons.svg#icon-Icon-bottom' ,
        topic:
        'What does the process of developing a software product look like from idea to implementation?',
        text:
@@ -62,13 +62,16 @@ const questions = [
     return questions
       .map(
         ({ svgroot, topic, text }, index) => `
-          <li class="faq" style="position: relative; ${index !== questions.length - 1 ? 'border-bottom: 1px solid rgba(250, 250, 250, 0.2);' : ''}">
-             <svg class="faq-icon" style="position: absolute; top: 32px; right: 20px; width: 40px; height: 40px; border: 1px solid; border-radius: 100px;">
-            <use href="${svgroot}"></use>
-          </svg>
-            <h3 class="question" style="font-size: 20px; font-weight: 600; line-height: 1.5; letter-spacing: -0.02em;">${topic}</h3>
-            <p class="faq-text" style="font-size: 16px; font-weight: 500; line-height: 1.5; letter-spacing: -0.02em;">${text}</p>
+          <li class="faq ${index !== questions.length - 1 ? '' : ''}">
+            <div class="faq-list-up">
+               <h3 class="question">${topic}</h3>
+                 <svg class="faq-icon">
+                   <use href="${svgroot}"></use>
+                </svg>
+           </div>
+          <p class="faq-text">${text}</p>
           </li>`
+          
       )
       .join('');
   }
@@ -93,46 +96,5 @@ const questions = [
 
 const styleElement = document.createElement('style');
 
-styleElement.textContent = `
-  @media screen and (min-width: 1440px) {
-    .faq-container {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      grid-template-rows: repeat(3, auto);
-      position: relative;
-    }
-    .faq-container::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: 50%;
-      width: 1px;
-      background-color: rgba(250, 250, 250, 0.2); ;
-    }
-    .faq {
-      padding: 0 32px;
-      border-bottom: 1px solid rgba(250, 250, 250, 0.2);
-    }
-    .faq:nth-child(odd) {
-      padding-left: 0;
-    }
-    .faq h3 {
-      padding-top: 32px;
-      padding-bottom: 26px;
-      font-size: 20px;
-      font-weight: 600;
-      line-height: 1.5;
-      letter-spacing: -0.02em;
-    }
-    .faq p {
-      padding-bottom: 26px;
-      font-size: 16px;
-      font-weight: 500;
-      line-height: 1.5;
-      letter-spacing: -0.02em;
-    }
-  }
-`;
 document.head.appendChild(styleElement);
 import 'accordion-js/dist/accordion.min.css';
