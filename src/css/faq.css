@@ -83,11 +83,9 @@
 /* Mobile-first */
 @media screen and (max-width: 768px) {
   
-  /* .faq-icon {
-    height: 30px;
-    width: auto;
-    max-width: 30px;
-  } */
+  .cont-faq {
+    gap: 0px;
+  }
 
   .question {
     padding: 20px 0 16px; 
