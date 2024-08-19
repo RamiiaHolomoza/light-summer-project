@@ -121,3 +121,4 @@ document.querySelector('.swiper-button-prev').addEventListener('click', () => {
 
 const perView = swiper.params.slidesPerView;
 fetchReviews(currentSlideIndex, perView);
+// fetchReviews(startIndex, endIndex);
