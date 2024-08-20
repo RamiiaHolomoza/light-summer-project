@@ -126,9 +126,10 @@ border: 1px solid #fafafa;
 .skills-content-list.swiper-wrapper {
     display: flex;
     position: relative;
-    width: 260px;
-    /* width: calc(100% / 3 *2); */
+    /* width: 260px; */
+    width: calc(100% - 28px);
     height: 100%;
+    /* overflow: hidden; */
 }
 
 .skills-content-list.swiper-wrapper .swiper-slide.slide-item-ab{
@@ -160,6 +161,7 @@ border: 1px solid #fafafa;
   padding: 0;
   gap: 0;
   border: none;
+  z-index: 1;
 }
 .new-width-class-item-ab{
   width: 130px;
@@ -224,6 +226,7 @@ border: 1px solid #fafafa;
 .skilla-about-swiper .swiper-button-next-ab {
   width: 40px;
   height: 40px;
+  z-index: 1;
 }
 }
 

@@ -2,7 +2,6 @@ import Accordion from 'accordion-js';
 import 'accordion-js/dist/accordion.min.css';
 import Swiper from 'swiper';
 import { Navigation} from 'swiper/modules';
-import axios from 'axios';
 
 import svgroot from '../img/icons.svg' 
 
@@ -68,8 +67,8 @@ export function handleAccAboutClick(event) {
 
 // -------------------------------------------------------------------
 
-// const skills = ['HTML/CSS', 'JavaScript', 'React', 'Node.js', 'React Native', ' Soft skills'];
-const skills = ['HTML/CSS', 'JavaScript', 'React', 'Node.js', 'React Native'];
+// const skills = ['HTML/CSS', 'JavaScript', 'React', 'Node.js', 'React Native', ' Soft skills', 'HTML/CSS', 'JavaScript', 'React', 'Node.js', 'React Native', ' Soft skills'];
+const skills = ['HTML/CSS', 'JavaScript', 'React', 'Node.js', 'React Native', ' Soft skills'];
 
 const skillsContentList = document.querySelector('.skills-content-list');
 
@@ -96,17 +95,30 @@ const swiperAbout = new Swiper('.skilla-about-swiper', {
 
     breakpoints: {
     320: {
-        slidesPerView: 2,
+        slidesPerView: 'auto',
     },
     768: {
-        slidesPerView: 3,
+        slidesPerView: 'auto',
     },
     1440: {
-        slidesPerView: 6,
+        slidesPerView: 'auto',
     },
     },
 });
 
+swiperAbout.update(); 
+
+document.querySelector('.swiper-button-next-ab').addEventListener('click', () => {
+    swiperAbout.slideNext();
+});
+
+function updateNavigationState() {
+    const nextButton = document.querySelector('.swiper-button-next-ab');
+
+    if (currentSlideIndex ) {
+    nextButton.classList.remove('swiper-button-lock');
+    }
+}
 
 // спроба перебити / прибрати специфічність класу від element.style
 
@@ -120,4 +132,3 @@ Array.from(slideItems).forEach(slideItem => {
     slideItem.classList.add('new-width-class-item-ab');
 });
 
-swiperAbout.update();
