@@ -1,5 +1,7 @@
 import { } from './js/header';
 
+import { } from './js/hero'
+
 import { createAboutInfoMarkup } from './js/about';
 
 import { createCardMarkup,  handleCardClick } from './js/benefits';
