@@ -1,3 +1,7 @@
+.section-footer {
+    position: relative;
+}
+
 .footer-container {
     min-width: 320px;
     padding-top: 32px;
@@ -101,7 +105,7 @@
 .footer-backdrop {
 
     background-position: center;
-    position: fixed;
+    position: absolute;
     background-size: cover;
     top: 50%;
     left: 50%;
@@ -262,6 +266,6 @@
     }
 
     .footer-backdrop {
-        top: 25%;
+        top: -20%;
     }
 }
