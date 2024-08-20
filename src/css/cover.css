@@ -21,14 +21,17 @@
   transform: rotate(17deg);
 }
 
-.covers-project {
-  width: 282px;
-  height: 162px;
-
+.covers-animation {
   animation-name: marqueeLine;
   animation-duration: 10s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+}
+
+.covers-project {
+  width: 282px;
+  height: 162px;
 }
 @keyframes marqueeLine {
   from {
