@@ -131,10 +131,8 @@ border: 1px solid #fafafa;
 .skills-content-list.swiper-wrapper {
     display: flex;
     position: relative;
-    /* width: 260px; */
-    width: calc(100% - 28px);
+    width: calc(130px * 2);
     height: 100%;
-    /* overflow: hidden; */
 }
 
 .skills-content-list.swiper-wrapper .swiper-slide.slide-item-ab{
@@ -161,13 +159,21 @@ border: 1px solid #fafafa;
 }
 
 .skilla-about-swiper .swiper-button-next-ab{
+  width: 100%;
+  height: 130px;
+  padding: 0;
+  background-color:#1c1d20;
+  display: flex;
+  z-index: 1;
+  align-items: center;
+  justify-content: end;
+}
+
+.icon-reviews{
   width: 28px;
   height: 28px;
-  padding: 0;
-  gap: 0;
-  border: none;
-  z-index: 1;
 }
+
 .new-width-class-item-ab{
   width: 130px;
 }
@@ -221,7 +227,7 @@ border: 1px solid #fafafa;
 
 .skills-content-list.swiper-wrapper {
   /* width: 600px; */
-    width: calc(100% - 40px);
+  width: calc(200px * 3);
 }
 
 .skills-content-list.swiper-wrapper .swiper-slide.slide-item-ab {
@@ -230,12 +236,16 @@ border: 1px solid #fafafa;
 }
 
 .skilla-about-swiper .swiper-button-next-ab {
-  width: 40px;
-  height: 40px;
+  width: 100%;
+  height: 200px;
   z-index: 1;
 }
 }
 
+.icon-reviews {
+  width: 40px;
+  height: 40px;
+}
 
 
 @media screen and (min-width: 1440px) {
@@ -259,7 +269,7 @@ padding-right: 68px;
 .info-content-item::after {
   margin-top: 24px;
 }
-/* .skills-content-list.swiper-wrapper {
-  width: 1200px;
-} */
+.skills-content-list.swiper-wrapper {
+  width: calc(200px * 6);
+}
 }
