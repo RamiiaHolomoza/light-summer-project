@@ -1,7 +1,9 @@
 import Accordion from 'accordion-js';
 import 'accordion-js/dist/accordion.min.css';
 import Swiper from 'swiper';
-import { Navigation, Pagination } from 'swiper/modules';
+import { Navigation} from 'swiper/modules';
+import axios from 'axios';
+
 import svgroot from '../img/icons.svg' 
 
 new Accordion('.info-content-list', {
@@ -64,40 +66,53 @@ export function handleAccAboutClick(event) {
     }
 }
 
+// -------------------------------------------------------------------
 
-const swiperContainerAb = document.getElementsByClassName('skills-content-list');
+// const skills = ['HTML/CSS', 'JavaScript', 'React', 'Node.js', 'React Native', ' Soft skills'];
+const skills = ['HTML/CSS', 'JavaScript', 'React', 'Node.js', 'React Native'];
+
+const skillsContentList = document.querySelector('.skills-content-list');
+
+skills.forEach(skill => {
+    const listItem = document.createElement('li');
+    listItem.classList.add('swiper-slide', 'slide-item-ab');
+    listItem.innerHTML = `<p class="swiper-ab-text">${skill}</p>`;
+    skillsContentList.appendChild(listItem);
+});
+
+// const swiperContainerAb = document.getElementsByClassName('skills-content-list');
 
 const swiperAbout = new Swiper('.skilla-about-swiper', {
     slidesPerView: 6,
     slidesPerGroup: 1,
     spaceBetween: 0,
-    modules: [Navigation, Pagination],
+    modules: [Navigation],
     loop: true, // нескінченний цикл
 
-    navigation: {
+        navigation: {
     nextEl: '.swiper-button-next-ab',
     },
     
-  pagination: {
-    el: '.swiper-pagination',
-    clickable: true,
-    },
-  
-  breakpoints: {
+
+    breakpoints: {
     320: {
-      slidesPerView: 2,
+        slidesPerView: 2,
     },
     768: {
-      slidesPerView: 3,
+        slidesPerView: 3,
     },
     1440: {
-      slidesPerView: 6,
+        slidesPerView: 6,
     },
     },
 });
 
+
+// спроба перебити / прибрати специфічність класу від element.style
+
 // const slideItems = document.getElementsByClassName('swiper-slide slide-item-ab');
 const slideItems = document.getElementsByClassName('.skills-content-list.swiper-wrapper .swiper-slide.slide-item-ab');
+
 
 Array.from(slideItems).forEach(slideItem => {
     // slideItem.style.removeProperty('width');
