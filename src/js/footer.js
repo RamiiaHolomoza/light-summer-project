@@ -97,8 +97,8 @@ document.querySelector('.footer-backdrop .footer-modal').addEventListener('click
 });
 
 import axios from 'axios';
-import iziToast from "izitoast";
-import "izitoast/dist/css/iziToast.min.css";
+// import iziToast from "izitoast";
+// import "izitoast/dist/css/iziToast.min.css";
 
 const form = document.querySelector('.footer-form');
 const emailInput = document.getElementById('email');
