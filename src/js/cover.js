@@ -1,12 +1,14 @@
 const targetElement = document.querySelector('.covers-content'); // елемент div
 const targetAnimation = document.querySelectorAll('.covers-project'); //масив li
+const nextElement = document.querySelector('.container-reviews')
 
 export function handleScroll() {
   for (let i = 0; i < targetAnimation.length; i++) {
     const windowHeight = window.innerHeight;
     const elementRect = targetElement.getBoundingClientRect();
     const elementTop = elementRect.top;
-
+    const nextElementRect = nextElement.getBoundingClientRect();
+    const nextElementTop = nextElementRect.top
 
     if (elementTop < windowHeight * 0.9) {
       // eлемент знаходиться у середині viewport користувача
@@ -15,10 +17,9 @@ export function handleScroll() {
       targetAnimation[i].classList.remove('covers-animation');
     }
 
-    // if (elementTop < windowHeight * 0.001) {
-    //   targetAnimation[i].classList.remove('covers-animation');
-    // }
-      //Треба якось зміститися ще нижче щоб зупинялась анімація 
+    if (nextElementTop < windowHeight * 0.1) {
+      targetAnimation[i].classList.remove('covers-animation');
+    }
   }
 }
 window.addEventListener('scroll', handleScroll);
