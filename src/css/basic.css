@@ -28,6 +28,7 @@
     padding: 0 16px;
     margin: 0 auto;
     margin-top: 64px;
+    background-color: #1c1d20;
 }
 
 @media screen and (min-width: 320px) and (max-width: 374px) {

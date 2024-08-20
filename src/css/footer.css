@@ -27,6 +27,10 @@
     text-transform: uppercase;
 }
 
+.footer-logo-img{
+    font-size: 14px;
+}
+
 .footer-title-span {
     color: #0041E8;
 }

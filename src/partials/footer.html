@@ -1,21 +1,16 @@
-<section class="section-footer" id="footer">
-  <div class="container">
-    <h2></h2>
-  </div>
-</section>
 <footer class="section-footer" id="footer">
   <div class="container footer-container">
     <h2 class="footer-title">
       <p class="footer-logo-text">
         <a class="footer-logo-link" href="./index.html">
           <picture>
-            <source srcset="../img/footer/footer-logo-desktop1x-min.png 1x,
-                            ../img/footer/footer-logo-destop2x-min-png 2x" media="(min-width: 1440px)" />
-            <source srcset="../img/footer/footer-logo-tablet1x-min.png 1x,
-                            ../img/footer/footer-logo-tablet2x-min.png 2x" media="(min-width: 768px)" />
-            <source srcset="../img/footer/footer-logo-mobile1x-min.png 1x,
-                            ../img/footer/footer-logo-mobile2x-min.png 2x" media="(max-width: 767px)" />
-            <img src="../img/footer/footer-logo-desktop1x-min.png" width="70" height="70"
+            <source srcset="/img/footer/footer-logo/footer-logo-desktop1x-min.png 1x,
+                            /img/footer/footer-logo/footer-logo-destop2x-min.png 2x" media="(min-width: 1440px)" />
+            <source srcset="/img/footer/footer-logo/footer-logo-tablet1x-min.png 1x,
+                            /img/footer/footer-logo/footer-logo-tablet2x-min.png 2x" media="(min-width: 768px)" />
+            <source srcset="/img/footer/footer-logo/footer-logo-mobile1x-min.png 1x,
+                            /img/footer/footer-logo/footer-logo-mobile2x-min.png 2x" media="(max-width: 767px)" />
+            <img src="/img/footer/footer-logo/footer-logo-desktop1x-min.jpg" width="70" height="70"
               alt="Lloyd Jefferson" class="footer-logo-img" />
           </picture>
         </a> Let’s<span class="footer-title-span"> work </span>together
@@ -24,13 +19,15 @@
 
     <form class="footer-form">
       <label class="footer-form-label">
-        <input class="footer-form-label-input" type="email" name="user-email" placeholder="clients@gmail.com"
+        <input class="footer-form-label-input" type="email" name="email" id="email" placeholder="clients@gmail.com"
           pattern="^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$" title="Email address" value="" required />
+          <span class="footer-input-message" id="emailSuccessMessage"></span>
       </label>
       <label class="footer-form-label">
-        <input class="footer-form-label-input" type="text" name="user-comments" placeholder="comments" required />
+        <input class="footer-form-label-input form-comments" type="text" name="comments" placeholder="comments" required />
+      <p id="charCount">0</p>
       </label>
-      <button type="submit" class="footer-form-button">Send</button>
+      <button type="submit" class="footer-form-button" disabled>Send</button>
     </form>
     <ul class="footer-contact-wrap-list">
       <li class="footer-contact-item">
@@ -43,20 +40,23 @@
       </li>
     </ul>
   </div>
-  <!------modal window------->
-<div class="modal is-open footer-backdrop">
+<!------modal window-------->
+<div class="footer-backdrop  is-open" id="modal">
   <div class="footer-modal">
     <button type="button" class="footer-close-button">
       <svg class="footer-icon-close" width="22" height="22">
-        <use href="../img/icons.svg#con-x"></use>
+        <use href="../img/icons.svg#icon-x"></use>
       </svg>
     </button>
-    <div class="footer-backdrop-content">
-      <h3 class="footer-backdrop-title">Thank you for your interest in cooperation!</h3>
-      <p class="footer-backdrop-text">The manager will contact you shortly to discuss further details and opportunities
-        for cooperation. Please stay in touch.</p>
-    </div>
+      <div class="footer-backdrop-content">
+    <h3 class="footer-backdrop-title">Thank you for your interest in cooperation!</h3>
+    <p class="footer-backdrop-text">The manager will contact you shortly to discuss further details and opportunities for cooperation. Please stay in touch.</p>
   </div>
+  </div> 
+
+</div>
+</footer>
+<<<<<<< HEAD
 
 </div>
 
@@ -64,3 +64,6 @@
 
 
 
+=======
+</div>
+>>>>>>> 9aa9da4e018d0090b80f95451a8c4964595eae15
