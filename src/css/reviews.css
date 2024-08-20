@@ -15,13 +15,13 @@
   align-items: center;
   gap: 32px;
   width: 344px;
+  position: relative;
 }
 
 /* .swiper-wrapper { */
 .swiper-wrapper.swiper-rew {
   display: flex;
   box-sizing: content-box;
-  gap: 16px;
 }
 
 .review-item {
@@ -37,6 +37,10 @@
 
 .swiper-wrapper.swiper-rew .swiper-slide {
   height: auto;
+}
+
+.swiper-wrapper.swiper-rew .swiper-slide:last-child {
+  margin-right: 0 !important;
 }
 
 .review-item-content {

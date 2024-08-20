@@ -87,17 +87,24 @@ export const swiper = new Swiper('.reviews-slider', {
     enabled: true,
     onlyInViewport: true,
   },
+  simulateTouch: true,
+  touchRatio: 1,
+  touchAngle: 45,
+  grabCursor: true,
+  longSwipesMs: 300,
+  longSwipesRatio: 0.5,
+  threshold: 10,
+  resistance: true,
+  resistanceRatio: 0.85,
   breakpoints: {
     320: {
       slidesPerView: 1,
     },
     768: {
       slidesPerView: 2,
-      spaceBetween: 16,
     },
     1440: {
       slidesPerView: 4,
-      spaceBetween: 16,
     },
   },
   on: {

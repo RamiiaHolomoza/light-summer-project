@@ -21,7 +21,7 @@
   font-family: 'Inter Tight';
   font-weight: 600;
   line-height: 1.5;
-  letter-spacing: -0.32px;
+  letter-spacing: -0.02em;
   text-transform: uppercase;
   margin-bottom: 32px;
 }
@@ -58,7 +58,7 @@
   font-family: 'Inter Tight';
   font-size: 16px;
   font-weight: 500;
-  letter-spacing: -0.32px;
+  letter-spacing: -0.02em;
 }
 .projects-description-item {
 }
@@ -71,7 +71,7 @@
   font-size: 24px;
   font-weight: 500;
   line-height: 1.2;
-  letter-spacing: -0.72px;
+  letter-spacing: -0.03em;
 }
 .projects-button {
   display: block;
@@ -108,7 +108,7 @@
   font-family: 'Inter Tight';
   font-size: 16px;
   font-weight: 500;
-  letter-spacing: -0.32px;
+  letter-spacing: -0.02em;
 }
 
 .projects-image {
@@ -137,7 +137,7 @@
 .projects-arrow-svg {
   display: block;
 }
-.custom-button-prev.swiper-button-disabled, 
+.custom-button-prev.swiper-button-disabled,
 .custom-button-next.swiper-button-disabled {
   fill: white;
   background-color: transparent;
@@ -174,7 +174,7 @@
     font-size: 44px;
     font-weight: 500;
     line-height: 100%;
-    letter-spacing: -1.32px;
+    letter-spacing: -0.03em;
     width: 494px;
     margin: 0 0 64px 64px;
   }
@@ -195,53 +195,15 @@
   }
 
   .custom-button-next,
-  .custom-button-prev {
+  .custom-button-prev,
+  .custom-button-prev.swiper-button-disabled,
+  .custom-button-next.swiper-button-disabled {
     padding: 18px;
   }
 
   .projects-arrow-svg {
     width: 32px;
     height: 32px;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  /* .container {
-    width: 1440px;
-    margin-top: 164px;
-  } */
-  .projects-pc-wrapper {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 64px;
-  }
-
-  .projects-section-total-wrapper {
-    border-bottom-left-radius: 24px;
-    border-top-left-radius: 24px;
-    border-top-right-radius: 0px;
-  }
-
-  .projects-image-nav-wrapper {
-    border-bottom-right-radius: 24px;
-    border-top-right-radius: 24px;
-    padding: 120px 37px;
-  }
-
-  .projects-image-nav-wrapper {
-    margin-bottom: 0px;
-  }
-
-  .projects-nav-buttons-wrapper {
-    padding-bottom: 0px;
-  }
-
-  .project-list {
-    margin: 0px 32px 223px 64px;
-  }
-
-  .projects-description-text {
-    margin: 0 132px 32px 64px;
   }
 }
 
@@ -265,6 +227,7 @@
   .projects-image-nav-wrapper {
     border-bottom-right-radius: 24px;
     border-top-right-radius: 24px;
+    border-bottom-left-radius: 0px;
     padding: 120px 37px;
   }
 
