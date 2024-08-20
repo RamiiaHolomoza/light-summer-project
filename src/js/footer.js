@@ -1,11 +1,19 @@
+
+const form = document.querySelector('.footer-form');
+const openModalBtn = document.querySelector('.footer-form-button');
+const closeModalBtn = document.querySelector('.footer-close-button');
+const footerModal = document.querySelector('.footer-backdrop');
+const modalContent = document.querySelector('.footer-modal');
+
+
 const STORAGE_KEY = "feedback-form-state";
 
 let formData = {
     email: "",
-    message: ""
+    comments: ""
 };
 
-populateForm();
+
 
 // Відстеження подій на формі
 form.addEventListener("submit", handleFormSubmit);
@@ -35,30 +43,35 @@ export function populateForm() {
       formData[key] = savedFeedbackData[key];
   }
 }
+populateForm();
 
 export function handleFormSubmit(event) {
     event.preventDefault();
 
-    if (!formData.email || !formData.message) {
+    if (!formData.email || !formData.comments) {
+      
         alert('Fill please all fields');
       return;
     }
     localStorage.removeItem(STORAGE_KEY)
 
-    event.currentTarget.reset()
+  form.reset();
 }
 /*відкрити модальне вікно*/
 openModalBtn.addEventListener("click", function () {
-    footerModal.classList.add("is-open")
+  footerModal.classList.add("is-open");
+  modalContent.classList.add("is-open");
 })
 //закрити модільне вікно
 closeModalBtn.addEventListener('click', function () {
-    footerModal.classList.remove('is-open')
+  footerModal.classList.remove('is-open');
+  modalContent.classList.remove("is-open");
 })
 //закрити модальне вікно при натисканні на Esc
 window.addEventListener('keydown', (e) => {
     if (e.key === "Escape") {
-    footerModal.classList.remove('is-open')
+      footerModal.classList.remove('is-open');
+      modalContent.classList.remove("is-open");
     }
 })
 //закрити модальне вікно при натисканні поза ним
