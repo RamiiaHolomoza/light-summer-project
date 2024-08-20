@@ -35,6 +35,7 @@ header .container{
 }
 
 .open-menu-btn{
+  border: none;
   background-color: transparent;
   cursor: pointer;
   height: 28px;
@@ -45,19 +46,6 @@ header .container{
   background-color: aquamarine;
   width: 100%;
 }
-
-/* .header {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background: transparent;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  z-index: 1000;
-} */
-
 
 .logo-container {
   display: flex;
@@ -96,9 +84,7 @@ color: var(--main-text);
 .nav-link:focus {
   color: #747bff;
 }
- /* button {
-  all: unset;
- } */
+
 
  .icon-burger {
   fill: var(--main-text);
@@ -126,7 +112,9 @@ align-items: center;
   justify-content: center;
   flex-direction: column;
 }
-
+.modal-close-btn{
+  all: unset;
+}
 
 .modal-close-btn {
   position: fixed;
@@ -190,6 +178,10 @@ height: 55px;
   align-items: center;
   flex-direction: column;
   gap: 5px;
+}
+
+.header-menu-button{
+  all: unset;
 }
 
 .header-menu-button {
