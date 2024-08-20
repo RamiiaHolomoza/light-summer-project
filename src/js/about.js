@@ -34,7 +34,7 @@ export function createAboutInfoMarkup(information) {
             ({ title, content }, index ) => `
         <li class="info-content-item ${index === 0 ? 'is-active' : ''}">
         <h3 class="accordion-header info-title-acc"><p>${title}</p><button type="button" class="acc-btn"><svg class="about-acc-icon" width="18" height="18">
-            <use href="${svgroot}#icon-Icon-bottom"></use></button></h3>
+            <use href="${svgroot}#icon-Icon-${index === 0 ? 'top': 'bottom'}"></use></button></h3>
         <div class="accordion-content info-text-acc">${content}</div>
         </li>
             `
@@ -51,6 +51,7 @@ active.style.maxHeight = active.scrollHeight + 'px';
 
 export function handleAccAboutClick(event) {
     const button = event.target.closest('.acc-btn');
+    const arrow =button.querySelector('.about-acc-icon')
     if (button) {
         const infoItem = button.closest('.info-content-item');
         const infoText = infoItem.querySelector('.accordion-content');
@@ -63,6 +64,8 @@ export function handleAccAboutClick(event) {
             infoText.style.maxHeight = 0;
         }
     }
+        arrow.classList.toggle('rotate180')
+
 }
 
 // -------------------------------------------------------------------
@@ -108,27 +111,24 @@ const swiperAbout = new Swiper('.skilla-about-swiper', {
 
 swiperAbout.update(); 
 
+// document.querySelector('.swiper-button-next-ab').addEventListener('click', () => {
+//     swiperAbout.slideNext();
+// });
+
 document.querySelector('.swiper-button-next-ab').addEventListener('click', () => {
-    swiperAbout.slideNext();
-});
+    const screenWidth = window.innerWidth;
+    
+    if (1399 < screenWidth) {
+            const activeSlide = document.querySelector('.swiper-slide-active');
+    let nextSlide = activeSlide.nextElementSibling;
 
-function updateNavigationState() {
-    const nextButton = document.querySelector('.swiper-button-next-ab');
-
-    if (currentSlideIndex ) {
-    nextButton.classList.remove('swiper-button-lock');
+    if (!nextSlide) {
+        nextSlide = document.querySelector('.swiper-slide:first-child');
     }
+
+    activeSlide.classList.remove('swiper-slide-active');
+    nextSlide.classList.add('swiper-slide-active');
 }
-
-// спроба перебити / прибрати специфічність класу від element.style
-
-// const slideItems = document.getElementsByClassName('swiper-slide slide-item-ab');
-const slideItems = document.getElementsByClassName('.skills-content-list.swiper-wrapper .swiper-slide.slide-item-ab');
-
-
-Array.from(slideItems).forEach(slideItem => {
-    // slideItem.style.removeProperty('width');
-    slideItem.removeAttribute('style');
-    slideItem.classList.add('new-width-class-item-ab');
+    
 });
 
