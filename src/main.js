@@ -1,5 +1,4 @@
-
-
+import {questions, ulElement, createFAQMarkup, styleElement} from './js/faq';
 
 
 
