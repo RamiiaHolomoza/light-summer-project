@@ -6,6 +6,7 @@
     flex-direction: column;
     gap: 64px;
     background-image: url('../img/footer/background-mob1x-min.png');
+    background-size: 85px 100%;
     background-position: right;
     background-repeat: no-repeat;
 }
@@ -119,7 +120,7 @@
     align-items: center;
 }
 
-modal window 
+/*modal window*/
 
 
 .footer-backdrop {
@@ -222,11 +223,13 @@ modal window
         padding-top: 80px;
         gap: 18px;
         background-image: url('../img/footer/background-tablet1x-min.png');
+        background-size: 198px auto;
     }
 
     @media (min-resolution: 192dpi) {
         .footer-container {
             background-image: url('../img/footer/backgroud-tablet2x-min.png');
+            
         }
     }
 
@@ -269,7 +272,7 @@ modal window
         padding: 18px 32px;
     }
 
-    modal window for tablet
+    /*modal window for tablet*/
 
     .footer-modal {
         width: 492px;
@@ -294,6 +297,7 @@ modal window
         padding-left: 196px;
         padding-right: 196px;
         background-image: url('../img/footer/background-desk1x-min.png');
+        background-size: 400px 100%;
     }
 
     @media (min-resolution: 192dpi) {
