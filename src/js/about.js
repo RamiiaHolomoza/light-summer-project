@@ -51,7 +51,7 @@ active.style.maxHeight = active.scrollHeight + 'px';
 
 export function handleAccAboutClick(event) {
     const button = event.target.closest('.acc-btn');
-    const arrow =button.querySelector('.about-acc-icon')
+    const arrow = button.querySelector('.about-acc-icon');
     if (button) {
         const infoItem = button.closest('.info-content-item');
         const infoText = infoItem.querySelector('.accordion-content');
