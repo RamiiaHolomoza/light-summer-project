@@ -5,6 +5,7 @@
   |============================
 */
 @import "modern-normalize";
+@import url('swiper/css');
 @import url('./reset.css');
 @import url('./basic.css');
 @import url('./header.css');
@@ -16,6 +17,7 @@
 @import url('./cover.css');
 @import url('./reviews.css');
 @import url('./footer.css');
+
 /* @import url('./'); */
 
 :root {
@@ -24,7 +26,7 @@
   font-size: 16px;
 
   color: #fafafa;
-  /* background-color: #1c1d20; */
+  background-color: #1c1d20;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;

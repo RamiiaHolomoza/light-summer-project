@@ -6,27 +6,27 @@
           <picture>
             <source
               srcset="
-                ../img/footer/footer-logo-desk-1x.png 1x,
-                ../img/footer/footer-logo-desk-2x.png 2x
+                ./img/footer/footer-logo-desk-1x.png 1x,
+                ./img/footer/footer-logo-desk-2x.png 2x
               "
               media="(min-width: 1440px)"
             />
             <source
               srcset="
-                ../img/footer/footer-logo-tab-1x.png 1x,
-                ../img/footer/footer-logo-tab-2x.png 2x
+                ./img/footer/footer-logo-tab-1x.png 1x,
+                ./img/footer/footer-logo-tab-2x.png 2x
               "
               media="(min-width: 768px)"
             />
             <source
               srcset="
-                ../img/footer/footer-logo-mob-1x.png 1x,
-                ../img/footer/footer-logo-mob-1x.png 2x
+                ./img/footer/footer-logo-mob-1x.png 1x,
+                ./img/footer/footer-logo-mob-1x.png 2x
               "
               media="(max-width: 767px)"
             />
             <img
-              src="../img/footer/footer-logo-desk-1x.png"
+              src="./img/footer/footer-logo-desk-1x.png"
               width="70"
               height="70"
               alt="Lloyd Jefferson"
@@ -43,7 +43,8 @@
         <input
           class="footer-form-label-input"
           type="email"
-          name="user-email"
+          name="email"
+          id="email"
           placeholder="clients@gmail.com"
           pattern="^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$"
           title="Email address"
@@ -53,9 +54,9 @@
       </label>
       <label class="footer-form-label">
         <input
-          class="footer-form-label-input"
+          class="footer-form-label-input form-comments"
           type="text"
-          name="user-comments"
+          name="comments"
           placeholder="comments"
           required
         />
@@ -83,25 +84,24 @@
       </li>
     </ul>
   </div>
-</footer>
-
-<!------modal window------->
-
-<div class="modal visually-hidden footer-backdrop">
-  <div class="footer-modal">
-    <button type="button" class="footer-close-button">
-      <svg class="footer-icon-close" width="22" height="22">
-        <use href="../img/icons.svg"></use>
-      </svg>
-    </button>
-    <div class="footer-backdrop-content">
-      <h3 class="footer-backdrop-title">
-        Thank you for your interest in cooperation!
-      </h3>
-      <p class="footer-backdrop-text">
-        The manager will contact you shortly to discuss further details and
-        opportunities for cooperation. Please stay in touch.
-      </p>
+  <!------modal window-------->
+  <div class="footer-backdrop" id="modal">
+    <div class="footer-modal">
+      <button type="button" class="footer-close-button">
+        <svg class="footer-icon-close" width="22" height="22">
+          <use href="./img/icons.svg#icon-x"></use>
+        </svg>
+      </button>
+      <div class="footer-backdrop-content">
+        <h3 class="footer-backdrop-title">
+          Thank you for your interest in cooperation!
+        </h3>
+        <p class="footer-backdrop-text">
+          The manager will contact you shortly to discuss further details and
+          opportunities for cooperation. Please stay in touch.
+        </p>
+      </div>
     </div>
   </div>
-</div>
+  <!-- <script type="module" src="../js/footer.js"></script> -->
+</footer>

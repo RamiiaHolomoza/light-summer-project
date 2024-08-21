@@ -76,6 +76,9 @@ const questions = [
                  <p class="faq-icon"><svg width="20" height="20">
                    <use href="${svgrootBasis}${svgroot}" ></use>
                 </svg></p>
+                 <svg class="faq-icon">
+                   <use href="${svgrootBasis}${svgroot}"></use>
+                </svg>
            </div>
           <p class="faq-text">${text}</p>
           </li>`

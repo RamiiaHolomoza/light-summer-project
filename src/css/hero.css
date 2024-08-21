@@ -12,7 +12,7 @@
 
     background-image: url('../img/hero/hero-blue-mob-1x.png');
     background-repeat: no-repeat;
-    background-size: 578px 812px; 
+    background-size: 578px 816px; 
     background-position: -268px 0px;
 }
 
@@ -27,6 +27,7 @@
     line-height: 100%;
     letter-spacing: -0.03em;
     text-transform: uppercase;
+    font-weight: 500;
 }
 
 .hero-list{
