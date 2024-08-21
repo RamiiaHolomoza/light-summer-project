@@ -81,15 +81,19 @@ background-color: transparent;
 display: flex;
 justify-content: center;
 align-items: center;
+transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.acc-btn:hover,
+/* .acc-btn:hover,
 .acc-btn:focus{
 border: 1px solid #fafafa;
-}
+} */
+ .acc-btn:hover {
+   border: 1px solid #fafafa;
+ }
 
 .about-acc-icon{
-  transition: transform 0.3s ease;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .rotate180 {
@@ -173,6 +177,7 @@ border: 1px solid #fafafa;
 .icon-reviews{
   width: 28px;
   height: 28px;
+  --color1: #3B3B3B;
 }
 
 .new-width-class-item-ab{
