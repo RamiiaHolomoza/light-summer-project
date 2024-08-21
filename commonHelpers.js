@@ -21,12 +21,11 @@ import{A as b,S as h,N as q,a as I}from"./assets/vendor-tBkKSLTP.js";(function()
           <li class="faq ${i!==t.length-1,""}">
             <div class="faq-list-up">
                <h3 class="question">${o}</h3>
-                 <p class="faq-icon"><svg width="20" height="20">
+                 <p class="faq-icon">
+                 <svg width="20" height="20">
                    <use href="${d}${e}" ></use>
-                </svg></p>
-                 <svg class="faq-icon">
-                   <use href="${d}${e}"></use>
                 </svg>
+                </p>
            </div>
           <p class="faq-text">${n}</p>
           </li>`).join("")}S.insertAdjacentHTML("beforeend",N(D));function W(t){if(t.target.closest(".faq-icon")){const e=t.target.closest(".faq"),o=e.querySelector(".faq-text"),n=e.querySelector(".faq-icon");e.classList.toggle("active"),n.classList.toggle("rotate"),e.classList.contains("active")?o.style.maxHeight=o.scrollHeight+"px":o.style.maxHeight=0}}S.addEventListener("click",W);const F=document.createElement("style");document.head.appendChild(F);const G=[{imagen1x:"./img/covers/project1.png",imagen2x:"./img/covers/project1-retina.png"},{imagen1x:"./img/covers/project2.png",imagen2x:"./img/covers/project2-retina.png"},{imagen1x:"./img/covers/project3.png",imagen2x:"./img/covers/project3-retina.png"},{imagen1x:"./img/covers/project4.png",imagen2x:"./img/covers/project4-retina.png"},{imagen1x:"./img/covers/project5.png",imagen2x:"./img/covers/project5-retina.png"},{imagen1x:"./img/covers/project6.png",imagen2x:"./img/covers/project6-retina.png"},{imagen1x:"./img/covers/project7.png",imagen2x:"./img/covers/project7-retina.png"},{imagen1x:"./img/covers/project8.png",imagen2x:"./img/covers/project8-retina.png"},{imagen1x:"./img/covers/project9.png",imagen2x:"./img/covers/project9-retina.png"},{imagen1x:"./img/covers/project10.png",imagen2x:"./img/covers/project10-retina.png"}];function z(t,e){const o=[];for(;o.length<e;)o.push(...t);return o.slice(0,e)}const U=z(G,25);function J(t){return t.map(({imagen1x:e,imagen2x:o})=>`
