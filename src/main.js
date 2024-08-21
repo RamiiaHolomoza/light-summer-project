@@ -1,28 +1,17 @@
-import { } from './js/header';
+import {} from './js/header';
 
-import { } from './js/hero'
+import {} from './js/hero';
 
 import { createAboutInfoMarkup } from './js/about';
 
-import { createCardMarkup,  handleCardClick } from './js/benefits';
+import { createCardMarkup, handleCardClick } from './js/benefits';
 
-import {  } from './js/projects';
+import {} from './js/projects';
 
-import {questions, ulElement, createFAQMarkup, styleElement} from './js/faq';
+import { questions, ulElement, createFAQMarkup, styleElement } from './js/faq';
 
-import { handleScroll } from './js/cover';
+import { createCoverCardMarkup, handleScroll } from './js/cover';
 
 import { fetchReviews, swiper } from './js/reviews';
 
-import { } from './js/footer';
-
-
-
-
-
-
-
-
-
-
-
+import {} from './js/footer';
