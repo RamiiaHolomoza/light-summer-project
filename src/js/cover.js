@@ -41,9 +41,16 @@ const coverCardItems = [
   },
 ];
 
-function shuffleArray(coverCardItems) {
-  return coverCardItems.sort(() => Math.random() - 0.5);
+function repeatArrayToLength(array, length) {
+  const repeatedArray = [];
+  while (repeatedArray.length < length) {
+    repeatedArray.push(...array); // Додаємо всі елементи з масиву до нового масиву
+  }
+  return repeatedArray.slice(0, length); // Обрізаємо масив до потрібної довжини
 }
+
+// Повторюємо масив до 25 елементів
+const extendedItems = repeatArrayToLength(coverCardItems, 25);
 
 export function createCoverCardMarkup(cards) {
   return cards
@@ -64,19 +71,12 @@ export function createCoverCardMarkup(cards) {
     .join('');
 }
 
-const shuffledItems = shuffleArray(coverCardItems);
 const coverUlElements = document.querySelectorAll('.covers-list');
 
 coverUlElements.forEach((ul, index) => {
-  const start = index * 5;
+  const start = index * 3;
   const end = start + 5;
-  ul.innerHTML = createCoverCardMarkup(shuffledItems.slice(start, end));
-
-  /*  ul.insertAdjacentHTML(
-    'beforeend',
-    createCoverCardMarkup(shuffledItems.slice(start, end))
-  );
-  */
+  ul.innerHTML = createCoverCardMarkup(extendedItems.slice(start, end));
 });
 
 const targetElement = document.querySelector('.covers-content'); // елемент div
@@ -104,48 +104,3 @@ export function handleScroll() {
   }
 }
 window.addEventListener('scroll', handleScroll);
-
-/*
-coverUlElements.insertAdjacentHTML(
-  'beforeend',
-  createCoverCardMarkup(coverCardItems)
-);
-
-coverUlElements.insertAdjacentHTML(
-  'beforeend',
-  createCoverCardMarkup(shuffledItems.slice(start, end))
-);
-*/
-/*
-const coversSection = document.querySelector('.section-covers');
-window.addEventListener('scroll', handleScroll);
-
-export function startAnimation(entries, observer) {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      document.querySelectorAll('.covers-project').forEach(item => {
-        item.style.animationPlayState = 'running';
-      });
-    } else {
-      document.querySelectorAll('.covers-project').forEach(item => {
-        item.style.animationPlayState = 'paused';
-      });
-    }
-  });
-}
-
-const observerOptions = {
-  root: null, // Використовуємо вікно браузера як viewport
-  threshold: 0.1, // Анімація запускається, коли 10% секції видимі
-};
-
-const observer = new IntersectionObserver(startAnimation, observerOptions);
-
-observer.observe(coversSection); // Відстежуємо секцію covers
-
-document.querySelectorAll('.covers-project').forEach(item => {
-  item.style.animationPlayState = 'paused';
-});
-
-
-*/
