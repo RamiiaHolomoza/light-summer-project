@@ -57,7 +57,7 @@ const questions = [
        {svgroot:
         '#icon-Icon-bottom' ,
        topic:
-       'What does the process of developing a software product look like from idea to implementation?',
+       'What does the process of developing a software<br >product look like from idea to implementation?',
        text:
        'Payment through credit and debit cards such as Visa, MasterCard, specialized electronic payment systems such as PayPal, as well as payments in cryptocurrencies such as Bitcoin, Ethereum and others.',
        },
@@ -73,6 +73,9 @@ const questions = [
           <li class="faq ${index !== questions.length - 1 ? '' : ''}">
             <div class="faq-list-up">
                <h3 class="question">${topic}</h3>
+                 <p class="faq-icon"><svg width="20" height="20">
+                   <use href="${svgrootBasis}${svgroot}" ></use>
+                </svg></p>
                  <svg class="faq-icon">
                    <use href="${svgrootBasis}${svgroot}"></use>
                 </svg>
@@ -85,23 +88,25 @@ const questions = [
   }
   ulElement.insertAdjacentHTML('beforeend', createFAQMarkup(questions));
 
-  function handleCardClick(event) {
+function handleCardClick(event) {
     if (event.target.closest('.faq-icon')) { 
       const faqItem = event.target.closest('.faq');
       const faqText = faqItem.querySelector('.faq-text');
-  
+      const faqIcon = faqItem.querySelector('.faq-icon');
+      
       faqItem.classList.toggle('active');
+      faqIcon.classList.toggle('rotate');
   
       if (faqItem.classList.contains('active')) {
-        faqText.style.maxHeight = faqText.scrollHeight + 'px'; 
+        faqText.style.maxHeight = faqText.scrollHeight + 'px';  
       } else {
         faqText.style.maxHeight = 0; 
       }
     }
+
   }
   
   ulElement.addEventListener('click', handleCardClick);
 
 const styleElement = document.createElement('style');
 document.head.appendChild(styleElement);
-import 'accordion-js/dist/accordion.min.css';
