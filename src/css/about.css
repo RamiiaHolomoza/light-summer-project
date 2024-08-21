@@ -235,6 +235,8 @@ border: 1px solid #fafafa;
 .skills-content-list.swiper-wrapper .swiper-slide.slide-item-ab {
   width: 200px;
   height: 200px;
+  font-size: 20px;
+  letter-spacing: -0.02em;
 }
 
 .skilla-about-swiper .swiper-button-next-ab {
