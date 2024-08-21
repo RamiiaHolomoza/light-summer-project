@@ -116,7 +116,7 @@ let formData = {
         if (key === "email") {
             validateEmail(event.target);
         }
-        }
+      
 // Підтвердьте електронну адресу та надішліть коментар
 function validateEmail(inputElement) {
   const emailMessage = document.getElementById("email-message");
