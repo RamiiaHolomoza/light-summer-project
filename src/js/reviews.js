@@ -18,7 +18,17 @@ export async function fetchReviews(start = 0, perView = 4) {
       updateNavigationState(perView);
     }
   } catch (error) {
-    showErrorPopup('Failed to load reviews. Please try again.');
+    const targetElement = document.querySelector('.section-reviews');
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      showErrorPopup('Failed to load reviews. Please try again.');
+    }
+  });
+});
+
+observer.observe(targetElement);
   }
 }
 
