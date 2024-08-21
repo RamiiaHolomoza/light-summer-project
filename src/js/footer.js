@@ -118,22 +118,7 @@ let formData = {
         }
       
 // Підтвердьте електронну адресу та надішліть коментар
-function validateEmail(inputElement) {
-  const emailMessage = document.getElementById("email-message");
-  const emailPattern = /^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;
 
-  if (emailPattern.test(inputElement.value.trim())) {
-    emailMessage.textContent = "Success!";
-    emailMessage.classList.add("success");
-    emailMessage.classList.remove("error");
-  } else {
-    emailMessage.textContent = "Invalid email, try again";
-    emailMessage.classList.add("error");
-    emailMessage.classList.remove("success");
-    emailMessage.style.color = '#e74a3b';
-  }
-
-}
   
 
       form.addEventListener('submit', function(event) {
