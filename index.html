@@ -15,7 +15,7 @@
     <script type="module" crossorigin src="/light-summer-project/commonHelpers.js"></script>
     <link rel="modulepreload" crossorigin href="/light-summer-project/assets/vendor-tBkKSLTP.js">
     <link rel="stylesheet" crossorigin href="/light-summer-project/assets/vendor-CzG10Eoq.css">
-    <link rel="stylesheet" crossorigin href="/light-summer-project/assets/index-BSBE0wOv.css">
+    <link rel="stylesheet" crossorigin href="/light-summer-project/assets/index-gIa0_N95.css">
   </head>
   <body>
     <header class="header" id="header">
@@ -42,10 +42,14 @@
         </button>
         <div class="modal-menu visually-hidden">
           <ul class="modal-list">
-            <li class="modal-list-item">About me</li>
-            <li class="modal-list-item">Benefits</li>
-            <li class="modal-list-item">Projects</li>
-            <li class="modal-list-item">FAQ</li>
+            <li class="modal-list-item">
+            <a href="#about-me">About me</a></li>
+            <li class="modal-list-item">
+            <a href="#benefits">Benefits</a></li>
+            <li class="modal-list-item">
+            <a href="#projects">Projects</a></li>
+            <li class="modal-list-item">
+            <a href="#faq">FAQ</a></li>
           </ul>
           <a href="#footer" class="modal-order-button">Order the project</a>
         </div>
@@ -55,10 +59,14 @@
       <nav class="nav-header visually-hidden">
         <button type="button" class="header-menu-button">Menu</button>
         <ul class="menu-list">
-          <li class="modal-list-item" href="#about-me">About me</li>
-          <li class="modal-list-item" href="#benefits">Benefits</li>
-          <li class="modal-list-item" href="#projects">Projects</li>
-          <li class="modal-list-item" href="#faq">FAQ</li>
+          <li class="modal-list-item">
+            <a href="#about-me">About me</a></li>
+            <li class="modal-list-item">
+            <a href="#benefits">Benefits</a></li>
+            <li class="modal-list-item">
+            <a href="#projects">Projects</a></li>
+            <li class="modal-list-item">
+            <a href="#faq">FAQ</a></li>
         </ul>
       </nav>
       <a href="#footer" class=" header-order-btn visually-hidden"> Order the project </a>
@@ -894,26 +902,51 @@
       </p>
     </h2>
 
-  <form class="footer-form">
-    <label class="footer-form-label">
-      <input class="footer-form-label-input" type="email" name="email" id="email" placeholder="clients@gmail.com"
-        pattern="^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$" title="Email address" value="" required />
-    </label>
-    <label class="footer-form-label">
-      <input class="footer-form-label-input form-comments" type="text" name="comments" placeholder="comments" required />
-    </label>
-    <button type="submit" class="footer-form-button">Send</button>
-  </form>
-  <ul class="footer-contact-wrap-list">
-    <li class="footer-contact-item">
-      <a class="footer-contact-email-link footer-contact-link" href="mailto:info@devstudio.com" target="_blank"
-        rel="noopener noreferrer nofollow">lloydjefferson@gmail.com</a>
-    </li>
-    <li class="footer-contact-item">
-      <a class="footer-contact-tel-link footer-contact-link" href="tel:+380684439426" target="_blank"
-        rel="noopener noreferrer nofollow">+380 11 1111 11 11</a>
-    </li>
-  </ul>
+    <form class="footer-form">
+      <label class="footer-form-label">
+        <input
+          class="footer-form-label-input"
+          type="email"
+          name="email"
+          id="email"
+          placeholder="clients@gmail.com"
+          pattern="^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$"
+          title="Email address"
+          value=""
+          required
+        />
+      </label>
+      <label class="footer-form-label">
+        <input
+          class="footer-form-label-input form-comments"
+          type="text"
+          name="comments"
+          placeholder="comments"
+          required
+        />
+      </label>
+      <button type="submit" class="footer-form-button">Send</button>
+    </form>
+    <ul class="footer-contact-wrap-list">
+      <li class="footer-contact-item">
+        <a
+          class="footer-contact-email-link footer-contact-link"
+          href="mailto:info@devstudio.com"
+          target="_blank"
+          rel="noopener noreferrer nofollow"
+          >lloydjefferson@gmail.com</a
+        >
+      </li>
+      <li class="footer-contact-item">
+        <a
+          class="footer-contact-tel-link footer-contact-link"
+          href="tel:+380684439426"
+          target="_blank"
+          rel="noopener noreferrer nofollow"
+          >+380 11 1111 11 11</a
+        >
+      </li>
+    </ul>
   </div>
   <!------modal window-------->
   <div class="footer-backdrop" id="modal">
@@ -934,6 +967,7 @@
       </div>
     </div>
   </div>
+  <!-- <script type="module" src="../js/footer.js"></script> -->
 </footer>
 
 
