@@ -73,12 +73,23 @@
     background-color: transparent;
     color: #fafafa;
 }
-
-.footer-form-label-input:active {
-    background-color: inherit;
-
+.email-message{
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 18px;
+    /* 128.571% */
+    letter-spacing: -0.28px;
+    display: block;
+        margin-top: 5px;
+}
+.email-message.success {
+    color: #3CBC81;
 }
 
+.email-message.error {
+    color: #E74A3B;
+}
 .footer-form-button {
     margin-top: 16px;
     color: #fafafa;
