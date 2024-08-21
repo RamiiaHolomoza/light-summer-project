@@ -140,6 +140,13 @@
   display: block;
 }
 
+@media screen and (min-width: 320px) and (max-width: 374px) {
+  .swiper-wrapper.swiper-rew .swiper-slide.review-item {
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .reviews-slider {
     width: 704px;
