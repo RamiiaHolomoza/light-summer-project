@@ -175,7 +175,9 @@ border: 1px solid #fafafa;
   height: 28px;
   --color1: #3B3B3B;
 }
-
+.icon-reviews:hover {
+  --color1: #fafafa;
+}
 .new-width-class-item-ab{
   width: 130px;
 }
