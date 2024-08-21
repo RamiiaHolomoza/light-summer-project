@@ -124,6 +124,16 @@
   --color1: #fafafa;
 }
 
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+  border-color: #fafafa;
+}
+
+.swiper-button-prev:hover.swiper-button-disabled:hover,
+.swiper-button-next:hover.swiper-button-disabled:hover {
+  border-color: #3b3b3b;
+}
+
 .error-popup {
   position: absolute;
   top: 10px;
@@ -141,8 +151,16 @@
 }
 
 @media screen and (min-width: 320px) and (max-width: 374px) {
+  .reviews-slider {
+    padding: 0 16px;
+    padding-left: 0;
+    box-sizing: border-box;
+    min-width: 288px;
+  }
+
   .swiper-wrapper.swiper-rew .swiper-slide.review-item {
     width: 100%;
+    margin: 0;
     box-sizing: border-box;
   }
 }
