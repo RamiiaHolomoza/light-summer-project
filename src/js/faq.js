@@ -73,12 +73,11 @@ const questions = [
           <li class="faq ${index !== questions.length - 1 ? '' : ''}">
             <div class="faq-list-up">
                <h3 class="question">${topic}</h3>
-                 <p class="faq-icon"><svg width="20" height="20">
+                 <p class="faq-icon">
+                 <svg width="20" height="20">
                    <use href="${svgrootBasis}${svgroot}" ></use>
-                </svg></p>
-                 <svg class="faq-icon">
-                   <use href="${svgrootBasis}${svgroot}"></use>
                 </svg>
+                </p>
            </div>
           <p class="faq-text">${text}</p>
           </li>`
