@@ -89,23 +89,11 @@ function updateNavigationState(perView) {
 export const swiper = new Swiper('.reviews-slider', {
   slidesPerView: 4,
   spaceBetween: 16,
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
+  navigation: false,
   keyboard: {
     enabled: true,
     onlyInViewport: true,
   },
-  simulateTouch: true,
-  touchRatio: 1,
-  touchAngle: 45,
-  grabCursor: true,
-  longSwipesMs: 300,
-  longSwipesRatio: 0.5,
-  threshold: 10,
-  resistance: true,
-  resistanceRatio: 0.85,
   breakpoints: {
     320: {
       slidesPerView: 1,
