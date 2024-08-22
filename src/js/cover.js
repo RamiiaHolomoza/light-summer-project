@@ -1,43 +1,63 @@
 const coverCardItems = [
   {
-    imagen1x: './img/covers/project1.png',
-    imagen2x: './img/covers/project1-retina.png',
+    imagen1x:
+      'https://github.com/RamiiaHolomoza/light-summer-project/tree/main/src/img/covers/project1.png',
+    imagen2x:
+      'https://github.com/RamiiaHolomoza/light-summer-project/tree/main/src/img/covers/project1-retina.png',
   },
   {
-    imagen1x: './img/covers/project2.png',
-    imagen2x: './img/covers/project2-retina.png',
+    imagen1x:
+      'https://github.com/RamiiaHolomoza/light-summer-project/tree/main/src/img/covers/project2.png',
+    imagen2x:
+      'https://github.com/RamiiaHolomoza/light-summer-project/tree/main/src/img/covers/project2-retina.png',
   },
   {
-    imagen1x: './img/covers/project3.png',
-    imagen2x: './img/covers/project3-retina.png',
+    imagen1x:
+      'https://github.com/RamiiaHolomoza/light-summer-project/tree/main/src/img/covers/project3.png',
+    imagen2x:
+      'https://github.com/RamiiaHolomoza/light-summer-project/tree/main/src/img/covers/project3-retina.png',
   },
   {
-    imagen1x: './img/covers/project4.png',
-    imagen2x: './img/covers/project4-retina.png',
+    imagen1x:
+      'https://github.com/RamiiaHolomoza/light-summer-project/tree/main/src/img/covers/project4.png',
+    imagen2x:
+      'https://github.com/RamiiaHolomoza/light-summer-project/tree/main/src/img/covers/project4-retina.png',
   },
   {
-    imagen1x: './img/covers/project5.png',
-    imagen2x: './img/covers/project5-retina.png',
+    imagen1x:
+      'https://github.com/RamiiaHolomoza/light-summer-project/tree/main/src/img/covers/project5.png',
+    imagen2x:
+      'https://github.com/RamiiaHolomoza/light-summer-project/tree/main/src/img/covers/project5-retina.png',
   },
   {
-    imagen1x: './img/covers/project6.png',
-    imagen2x: './img/covers/project6-retina.png',
+    imagen1x:
+      'https://github.com/RamiiaHolomoza/light-summer-project/tree/main/src/img/covers/project6.png',
+    imagen2x:
+      'https://github.com/RamiiaHolomoza/light-summer-project/tree/main/src/img/covers/project6-retina.png',
   },
   {
-    imagen1x: './img/covers/project7.png',
-    imagen2x: './img/covers/project7-retina.png',
+    imagen1x:
+      'https://github.com/RamiiaHolomoza/light-summer-project/tree/main/src/img/covers/project7.png',
+    imagen2x:
+      'https://github.com/RamiiaHolomoza/light-summer-project/tree/main/src/img/covers/project7-retina.png',
   },
   {
-    imagen1x: './img/covers/project8.png',
-    imagen2x: './img/covers/project8-retina.png',
+    imagen1x:
+      'https://github.com/RamiiaHolomoza/light-summer-project/tree/main/src/img/covers/project8.png',
+    imagen2x:
+      'https://github.com/RamiiaHolomoza/light-summer-project/tree/main/src/img/covers/project8-retina.png',
   },
   {
-    imagen1x: './img/covers/project9.png',
-    imagen2x: './img/covers/project9-retina.png',
+    imagen1x:
+      'https://github.com/RamiiaHolomoza/light-summer-project/tree/main/src/img/covers/project9.png',
+    imagen2x:
+      'https://github.com/RamiiaHolomoza/light-summer-project/tree/main/src/img/covers/project9-retina.png',
   },
   {
-    imagen1x: './img/covers/project10.png',
-    imagen2x: './img/covers/project10-retina.png',
+    imagen1x:
+      'https://github.com/RamiiaHolomoza/light-summer-project/tree/main/src/img/covers/project10.png',
+    imagen2x:
+      'https://github.com/RamiiaHolomoza/light-summer-project/tree/main/src/img/covers/project10-retina.png',
   },
 ];
 
@@ -98,7 +118,7 @@ export function handleScroll() {
       targetAnimation[i].classList.remove('covers-animation');
     }
 
-    if (nextElementTop < windowHeight * 0.2) {
+    if (nextElementTop < windowHeight * 0.5) {
       targetAnimation[i].classList.remove('covers-animation');
     }
   }
