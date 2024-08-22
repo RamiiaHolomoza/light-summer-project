@@ -64,3 +64,6 @@ input:active {
   text-decoration: none;
 }
 
+html {
+  scroll-behavior: smooth;
+}
