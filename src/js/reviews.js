@@ -42,7 +42,7 @@ function renderReviews(reviews) {
     slide.innerHTML = `
       <div class="review-item-content">
         <img class="image-reviews" src="${review.avatar_url}" alt="${review.author}">
-        <b class="name-reviews">${review.author}</b>
+        <h3 class="name-reviews">${review.author}</h3>
         <p class="text-reviews">${review.review}</p>
       </div>`;
     swiperWrapper.appendChild(slide);
