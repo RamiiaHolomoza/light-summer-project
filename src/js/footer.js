@@ -1,3 +1,4 @@
+import axios from 'axios';
 
  const form = document.querySelector('.footer-form');
  const modal = document.getElementById('modal');
@@ -37,6 +38,26 @@ function handleFormSubmit(event) {
         alert('Fill in all fields');
     }
 }
+
+  
+//   Надішліть дані форми на сервер
+    function submitFormData(data) {
+        axios.post(API_URL, data)
+        .then(response => {
+            if (response.status === 200) {
+                openModal();  // Успішне створення заявки, відкриваємо модальне вікно
+                localStorage.removeItem(STORAGE_KEY);  // Очищуємо localStorage
+                form.reset();  // Скидаємо форму
+                formData = {};  // Очищуємо formData
+            } else {
+                throw new Error('Unexpected response status');
+            }
+        })
+        .catch(error => {
+            alert('There was a problem with your submission. Please try again.');
+            console.error(error);  // Логування помилки для діагностики
+        });
+   }
 
 function validateEmail(inputElement) {
     
@@ -154,35 +175,7 @@ function populateForm() {
             // emailMessage.classList.remove("success");
         // }
   // }
-  
-  // Надішліть дані форми на сервер
-    //function submitFormData(data) {
-        // fetch(API_URL, {
-        //     method: 'POST',
-        //     headers: {
-        //         'Content-Type': 'application/json',
-        //     },
-        //     body: JSON.stringify(data),
-        // })
-        // .then(response => {
-        //     if (!response.ok) {
-        //         throw new Error('Network response was not ok');
-        //     }
-        //     return response.json();
-        // })
-        // .then(result => {
-        //     // Відобразити success
-        //     modal.classList.add('is-open');
-        //     // Очистити localStorage і скинути форму
-        //     localStorage.removeItem(STORAGE_KEY);
-        //     form.reset();
-        //     formData = {};
-        // })
-        // .catch(error => {
-        //     // Показати користувачеві повідомлення про помилку
-        //     alert('There was a problem with your submission. Please try again.');
-        // });
-   // }
+
 
 // Заповнити поля форми збереженими даними з localStorage
         // function populateForm() {
