@@ -1,99 +1,115 @@
+import axios from 'axios';
 
-document.addEventListener("DOMContentLoaded", function() {
-    const form = document.querySelector('.footer-form');
-    const modal = document.getElementById('modal');
-  const closeModalBtn = document.querySelector('.footer-close-button');
-  
-  // Відстеження події на відправлення форми
-    form.addEventListener('submit', function(event) {
-      event.preventDefault(); // Перешкоджаємо стандартному відправленню форми
-      
-       // Перевірка валідності форми
-      if (form.checkValidity()) {
-        // Якщо форма валідна, відображаємо модальне вікно
-        modal.classList.add('is-open');
-          
-        const STORAGE_KEY = "feedback-form-state";
+ const form = document.querySelector('.footer-form');
+ const modal = document.getElementById('modal');
+ const closeModalBtn = document.querySelector('.footer-close-button');
+ const emailMessage = document.getElementById("email-message");
 
-        let formData = {
-          email: "",
-          comments: ""
-        };
-        // Відстеження подій на формі
-        form.addEventListener("submit", handleFormSubmit);
-        form.addEventListener("input", handleFormInput);
+const API_URL = "https://portfolio-js.b.goit.study/api/";
 
-        // Функція для обробки введення даних у форму
-        function handleFormInput(event) {
-          const value = event.target.value.trim();
-          const key = event.target.name.trim();
+ const STORAGE_KEY = 'feedback-form-state';
 
-          formData[key] = value;
-    
-          localStorage.setItem(STORAGE_KEY, JSON.stringify(formData));
-    
-          console.log(key, value);
-        }
+let formData = {
+    email: '',
+    comment: ''
+};
 
-        function populateForm() {
-          let savedFeedbackData = JSON.parse(localStorage.getItem(STORAGE_KEY));
-  
-          if (!savedFeedbackData) {
-            return;
-          }
+populateForm();
 
-          for (const key in savedFeedbackData) {
-            form.elements[key].value = savedFeedbackData[key];
-            formData[key] = savedFeedbackData[key];
-          }
-        }
-        populateForm();
+form.addEventListener('input', handleFormInput);
+form.addEventListener('submit', handleFormSubmit);
 
-        function handleFormSubmit(event) {
-          event.preventDefault();
+function handleFormInput(event) {
+    const { value, name } = event.target;
+    formData[name] = value.trim();
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(formData));
 
-          if (!formData.email || !formData.comments) {
-      
-            alert('Fill please all fields');
-            return;
-          }
-          localStorage.removeItem(STORAGE_KEY)
+    if (name === 'email') {
+        validateEmail(event.target);
+    }
 }
-      
-          form.reset();
-        
-      }
-    });
 
-    // Закриття модального вікна
-    closeModalBtn.addEventListener('click', function() {
+function handleFormSubmit(event) {
+    event.preventDefault();
+    
+    if (form.checkValidity()) {
+        submitFormData(formData);
+    } else {
+        alert('Fill in all fields');
+    }
+}
+
+  
+//   Надішліть дані форми на сервер
+function submitFormData(data) {
+  console.log('Sending data:', data);
+  axios
+      .post(`${API_URL}requests`, data)
+        .then(response => {
+            if (response.status === 200 || response.status === 201) {  // Перевірка на успішний статус відповіді
+                openModal();  // Відкриваємо модальне вікно
+
+                // Очистити форму і localStorage тільки після успішного відправлення даних на сервер
+                localStorage.removeItem(STORAGE_KEY);  // Очищуємо localStorage
+                form.reset();  // Скидаємо форму
+                formData = {};  // Очищуємо formData
+            } else {
+                throw new Error('Unexpected response status');
+            }
+        })
+        .catch(error => {
+            alert('There was a problem with your submission. Please try again.');
+            console.error(error);  // Логування помилки для діагностики
+        });
+}
+
+function validateEmail(inputElement) {
+    
+    const emailPattern = /^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;
+
+    if (emailPattern.test(inputElement.value.trim())) {
+        emailMessage.textContent = "Success!";
+        emailMessage.classList.add("success");
+        emailMessage.classList.remove("error");
+    } else {
+        emailMessage.textContent = "Invalid email, try again";
+        emailMessage.classList.add("error");
+        emailMessage.classList.remove("success");
+    }
+}
+
+
+function openModal() {
+  emailMessage.textContent = ' ';
+    modal.classList.add('is-open');
+}
+
+closeModalBtn.addEventListener('click', function() {
         modal.classList.remove('is-open');
-    });
-
-    // Додатково закриваємо модальне вікно при кліку на фон
-    modal.addEventListener('click', function(event) {
+});
+    
+ modal.addEventListener('click', function(event) {
         if (event.target === modal) {
             modal.classList.remove('is-open');
         }
     });
-  
-     //закрити модальне вікно при натисканні на Esc
+
 window.addEventListener('keydown', (e) => {
-    if (e.key === "Escape") {
-      modal.classList.remove('is-open');
-      
+  if (e.key === "Escape") {
+    modal.classList.remove('is-open');
+  }
+    })
+
+function populateForm() {
+    const savedFeedbackData = JSON.parse(localStorage.getItem(STORAGE_KEY));
+
+    if (savedFeedbackData) {
+        for (const key in savedFeedbackData) {
+            if (savedFeedbackData.hasOwnProperty(key)) {
+                form.elements[key].value = savedFeedbackData[key];
+                formData[key] = savedFeedbackData[key];
+            }
+        }
     }
-})
-});
-
-
-
-
-
-
-
-
-
-
-
+}
 

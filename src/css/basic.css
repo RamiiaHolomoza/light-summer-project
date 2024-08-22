@@ -52,7 +52,7 @@
         margin-top: 164px;
     }
 
-    .container:nth-last-child() {
+    .container:not(:last-child) {
         margin-bottom: 164px;
     }
 }

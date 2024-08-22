@@ -1,49 +1,77 @@
+import img1x1 from '../img/covers/project1.png';
+import img1x2 from '../img/covers/project1-retina.png';
+import img2x1 from '../img/covers/project2.png';
+import img2x2 from '../img/covers/project2-retina.png';
+import img3x1 from '../img/covers/project3.png';
+import img3x2 from '../img/covers/project3-retina.png';
+import img4x1 from '../img/covers/project4.png';
+import img4x2 from '../img/covers/project4-retina.png';
+import img5x1 from '../img/covers/project5.png';
+import img5x2 from '../img/covers/project5-retina.png';
+import img6x1 from '../img/covers/project6.png';
+import img6x2 from '../img/covers/project6-retina.png';
+import img7x1 from '../img/covers/project7.png';
+import img7x2 from '../img/covers/project7-retina.png';
+import img8x1 from '../img/covers/project8.png';
+import img8x2 from '../img/covers/project8-retina.png';
+import img9x1 from '../img/covers/project9.png';
+import img9x2 from '../img/covers/project9-retina.png';
+import img10x1 from '../img/covers/project10.png';
+import img10x2 from '../img/covers/project10-retina.png';
+
 const coverCardItems = [
   {
-    imagen1x: '../img/covers/project1.png',
-    imagen2x: '../img/covers/project1-retina.png',
+    imagen1x: img1x1,
+    imagen2x: img1x2,
   },
   {
-    imagen1x: '../img/covers/project2.png',
-    imagen2x: '../img/covers/project2-retina.png',
+    imagen1x: img2x1,
+    imagen2x: img2x2,
   },
   {
-    imagen1x: '../img/covers/project3.png',
-    imagen2x: '../img/covers/project3-retina.png',
+    imagen1x: img3x1,
+    imagen2x: img3x2,
   },
   {
-    imagen1x: '../img/covers/project4.png',
-    imagen2x: '../img/covers/project4-retina.png',
+    imagen1x: img4x1,
+    imagen2x: img4x2,
   },
   {
-    imagen1x: '../img/covers/project5.png',
-    imagen2x: '../img/covers/project5-retina.png',
+    imagen1x: img5x1,
+    imagen2x: img5x2,
   },
   {
-    imagen1x: '../img/covers/project6.png',
-    imagen2x: '../img/covers/project6-retina.png',
+    imagen1x: img6x1,
+    imagen2x: img6x2,
   },
   {
-    imagen1x: '../img/covers/project7.png',
-    imagen2x: '../img/covers/project7-retina.png',
+    imagen1x: img7x1,
+    imagen2x: img7x2,
   },
   {
-    imagen1x: '../img/covers/project8.png',
-    imagen2x: '../img/covers/project8-retina.png',
+    imagen1x: img8x1,
+    imagen2x: img8x2,
   },
   {
-    imagen1x: '../img/covers/project9.png',
-    imagen2x: '../img/covers/project9-retina.png',
+    imagen1x: img9x1,
+    imagen2x: img9x2,
   },
   {
-    imagen1x: '../img/covers/project10.png',
-    imagen2x: '../img/covers/project10-retina.png',
+    imagen1x: img10x1,
+    imagen2x: img10x2,
   },
 ];
 
-function shuffleArray(coverCardItems) {
-  return coverCardItems.sort(() => Math.random() - 0.5);
+function repeatArrayToLength(array, length) {
+  const repeatedArray = [];
+  while (repeatedArray.length < length) {
+    repeatedArray.push(...array); // Додаємо всі елементи з масиву до нового масиву
+  }
+  return repeatedArray.slice(0, length); // Обрізаємо масив до потрібної довжини
 }
+
+// Повторюємо масив до 25 елементів
+const extendedItems = repeatArrayToLength(coverCardItems, 25);
 
 export function createCoverCardMarkup(cards) {
   return cards
@@ -64,19 +92,12 @@ export function createCoverCardMarkup(cards) {
     .join('');
 }
 
-const shuffledItems = shuffleArray(coverCardItems);
 const coverUlElements = document.querySelectorAll('.covers-list');
 
 coverUlElements.forEach((ul, index) => {
-  const start = index * 5;
+  const start = index * 3;
   const end = start + 5;
-  ul.innerHTML = createCoverCardMarkup(shuffledItems.slice(start, end));
-
-  /*  ul.insertAdjacentHTML(
-    'beforeend',
-    createCoverCardMarkup(shuffledItems.slice(start, end))
-  );
-  */
+  ul.innerHTML = createCoverCardMarkup(extendedItems.slice(start, end));
 });
 
 const targetElement = document.querySelector('.covers-content'); // елемент div
@@ -98,54 +119,9 @@ export function handleScroll() {
       targetAnimation[i].classList.remove('covers-animation');
     }
 
-    if (nextElementTop < windowHeight * 0.2) {
+    if (nextElementTop < windowHeight * 0.5) {
       targetAnimation[i].classList.remove('covers-animation');
     }
   }
 }
 window.addEventListener('scroll', handleScroll);
-
-/*
-coverUlElements.insertAdjacentHTML(
-  'beforeend',
-  createCoverCardMarkup(coverCardItems)
-);
-
-coverUlElements.insertAdjacentHTML(
-  'beforeend',
-  createCoverCardMarkup(shuffledItems.slice(start, end))
-);
-*/
-/*
-const coversSection = document.querySelector('.section-covers');
-window.addEventListener('scroll', handleScroll);
-
-export function startAnimation(entries, observer) {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      document.querySelectorAll('.covers-project').forEach(item => {
-        item.style.animationPlayState = 'running';
-      });
-    } else {
-      document.querySelectorAll('.covers-project').forEach(item => {
-        item.style.animationPlayState = 'paused';
-      });
-    }
-  });
-}
-
-const observerOptions = {
-  root: null, // Використовуємо вікно браузера як viewport
-  threshold: 0.1, // Анімація запускається, коли 10% секції видимі
-};
-
-const observer = new IntersectionObserver(startAnimation, observerOptions);
-
-observer.observe(coversSection); // Відстежуємо секцію covers
-
-document.querySelectorAll('.covers-project').forEach(item => {
-  item.style.animationPlayState = 'paused';
-});
-
-
-*/
