@@ -4,6 +4,8 @@
  const closeModalBtn = document.querySelector('.footer-close-button');
  const emailMessage = document.getElementById("email-message");
 
+const API_URL = "https://ramiiaholomoza.github.io/light-summer-project/";
+
  const STORAGE_KEY = 'feedback-form-state';
 
 let formData = {
