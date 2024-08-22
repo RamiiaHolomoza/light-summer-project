@@ -38,7 +38,21 @@ function validateEmail(inputElement) {
     isEmailValid = isValid
     return isEmailValid;
 }
+function validateInputLength() {
+    const commentsInput = document.querySelector('.form-comments');
+    const maxLength = commentsInput.getAttribute('maxlength');
 
+    commentsInput.addEventListener('input', function() {
+        const currentLength = commentsInput.value.length;
+
+        if (currentLength >= maxLength) {
+            commentsInput.value = commentsInput.value.substring(0, maxLength) + '...';
+        }
+
+        updateTextOverflow(commentsInput);
+    });
+     updateTextOverflow(commentsInput);
+}
 
 function handleFormInput(event) {
     const { value, name } = event.target;
@@ -51,7 +65,11 @@ function handleFormInput(event) {
   checkFormValidity();
 }
 
+function updateTextOverflow(inputElement) {
+    inputElement.classList.toggle('impute-ellips', inputElement.value.length >= inputElement.getAttribute('maxlength'));
+}
 
+validateInputLength();
 
 function handleFormSubmit(event) {
     event.preventDefault();

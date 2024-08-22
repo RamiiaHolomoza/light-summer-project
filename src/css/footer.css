@@ -129,6 +129,17 @@
     background-color: #0039CF;
 }
 
+.form-comments {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    display: inline-block;
+    max-width: 100%;
+}
+
+.impute-ellips {
+    border: #e7493bec;
+}
 
 .footer-contact-wrap-list {
     display: flex;
