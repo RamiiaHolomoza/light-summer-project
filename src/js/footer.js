@@ -3,12 +3,13 @@ import axios from 'axios';
  const form = document.querySelector('.footer-form');
  const modal = document.getElementById('modal');
  const closeModalBtn = document.querySelector('.footer-close-button');
- const emailMessage = document.getElementById("email-message");
+  const emailMessage = document.getElementById("email-message");
+  const submitButton = form.querySelector('button[type="submit"]');
 
 const API_URL = "https://portfolio-js.b.goit.study/api/";
-
- const STORAGE_KEY = 'feedback-form-state';
-
+const STORAGE_KEY = 'feedback-form-state';
+ 
+let isEmailValid = false;
 let formData = {
     email: '',
     comment: ''
@@ -19,6 +20,26 @@ populateForm();
 form.addEventListener('input', handleFormInput);
 form.addEventListener('submit', handleFormSubmit);
 
+
+function validateEmail(inputElement) {
+  const emailPattern = /^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;
+  const isValid = emailPattern.test(inputElement.value.trim());
+  
+
+  if (isValid) {
+    emailMessage.textContent = "Success!";
+    emailMessage.classList.add("success");
+    emailMessage.classList.remove("error");
+  }  else {
+        emailMessage.textContent = "Invalid email, try again";
+        emailMessage.classList.add("error");
+        emailMessage.classList.remove("success");
+  }
+    isEmailValid = isValid
+    return isEmailValid;
+}
+
+
 function handleFormInput(event) {
     const { value, name } = event.target;
     formData[name] = value.trim();
@@ -26,8 +47,11 @@ function handleFormInput(event) {
 
     if (name === 'email') {
         validateEmail(event.target);
-    }
+  }
+  checkFormValidity();
 }
+
+
 
 function handleFormSubmit(event) {
     event.preventDefault();
@@ -63,21 +87,12 @@ function submitFormData(data) {
         });
 }
 
-function validateEmail(inputElement) {
-    
-    const emailPattern = /^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;
 
-    if (emailPattern.test(inputElement.value.trim())) {
-        emailMessage.textContent = "Success!";
-        emailMessage.classList.add("success");
-        emailMessage.classList.remove("error");
-    } else {
-        emailMessage.textContent = "Invalid email, try again";
-        emailMessage.classList.add("error");
-        emailMessage.classList.remove("success");
-    }
+
+function checkFormValidity() {
+    const isFormValid = isEmailValid && formData.email !== '' && formData.comment !== '';
+    submitButton.disabled = !isFormValid;
 }
-
 
 function openModal() {
   emailMessage.textContent = ' ';
@@ -113,3 +128,19 @@ function populateForm() {
     }
 }
 
+// -----------------------
+// const inputs = document.querySelectorAll('.footer-form-label-input'); // Вибираємо всі інпути
+
+// inputs.forEach(input => {
+//     input.addEventListener('input', () => {
+//         const mirror = document.querySelector(`.input-text-mirror[data-mirror-for="${input.id}"]`); // Знаходимо відповідне дзеркало
+        
+//         if (mirror) {
+//             mirror.textContent = input.value; // Копіюємо введений текст у блок-зеркало
+
+//             if (mirror.scrollWidth > mirror.clientWidth) {
+//                 mirror.textContent = input.value.substring(0, input.value.length - 1) + '...'; // Додаємо три крапки
+//             }
+//         }
+//     });
+// });
