@@ -86,7 +86,7 @@ const skillsContentList = document.querySelector('.skills-content-list');
 skills.forEach(skill => {
   const listItem = document.createElement('li');
   listItem.classList.add('swiper-slide', 'slide-item-ab');
-  listItem.innerHTML = <p class="swiper-ab-text">${skill}</p>;
+  listItem.innerHTML = `<p class="swiper-ab-text">${skill}</p>`;
   skillsContentList.appendChild(listItem);
 });
 
@@ -137,19 +137,3 @@ function updateActiveElement() {
     activeSlide.classList.add('swiper-slide-active');
   }
 }
-// document.querySelector('.swiper-button-next-ab').addEventListener('click', () => {
-//     const screenWidth = window.innerWidth;
-
-//     if (1399 < screenWidth) {
-//             const activeSlide = document.querySelector('.swiper-slide-active');
-//     let nextSlide = activeSlide.nextElementSibling;
-
-//     if (!nextSlide) {
-//         nextSlide = document.querySelector('.swiper-slide:first-child');
-//     }
-
-//     activeSlide.classList.remove('swiper-slide-active');
-//     nextSlide.classList.add('swiper-slide-active');
-// }
-
-// });
