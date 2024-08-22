@@ -1,63 +1,64 @@
+import img1x1 from '../img/covers/project1.png';
+import img1x2 from '../img/covers/project1-retina.png';
+import img2x1 from '../img/covers/project2.png';
+import img2x2 from '../img/covers/project2-retina.png';
+import img3x1 from '../img/covers/project3.png';
+import img3x2 from '../img/covers/project3-retina.png';
+import img4x1 from '../img/covers/project4.png';
+import img4x2 from '../img/covers/project4-retina.png';
+import img5x1 from '../img/covers/project5.png';
+import img5x2 from '../img/covers/project5-retina.png';
+import img6x1 from '../img/covers/project6.png';
+import img6x2 from '../img/covers/project6-retina.png';
+import img7x1 from '../img/covers/project7.png';
+import img7x2 from '../img/covers/project7-retina.png';
+import img8x1 from '../img/covers/project8.png';
+import img8x2 from '../img/covers/project8-retina.png';
+import img9x1 from '../img/covers/project9.png';
+import img9x2 from '../img/covers/project9-retina.png';
+import img10x1 from '../img/covers/project10.png';
+import img10x2 from '../img/covers/project10-retina.png';
+
 const coverCardItems = [
   {
-    imagen1x:
-      'https://github.com/RamiiaHolomoza/light-summer-project/tree/main/src/img/covers/project1.png',
-    imagen2x:
-      'https://github.com/RamiiaHolomoza/light-summer-project/tree/main/src/img/covers/project1-retina.png',
+    imagen1x: img1x1,
+    imagen2x: img1x2,
   },
   {
-    imagen1x:
-      'https://github.com/RamiiaHolomoza/light-summer-project/tree/main/src/img/covers/project2.png',
-    imagen2x:
-      'https://github.com/RamiiaHolomoza/light-summer-project/tree/main/src/img/covers/project2-retina.png',
+    imagen1x: img2x1,
+    imagen2x: img2x2,
   },
   {
-    imagen1x:
-      'https://github.com/RamiiaHolomoza/light-summer-project/tree/main/src/img/covers/project3.png',
-    imagen2x:
-      'https://github.com/RamiiaHolomoza/light-summer-project/tree/main/src/img/covers/project3-retina.png',
+    imagen1x: img3x1,
+    imagen2x: img3x2,
   },
   {
-    imagen1x:
-      'https://github.com/RamiiaHolomoza/light-summer-project/tree/main/src/img/covers/project4.png',
-    imagen2x:
-      'https://github.com/RamiiaHolomoza/light-summer-project/tree/main/src/img/covers/project4-retina.png',
+    imagen1x: img4x1,
+    imagen2x: img4x2,
   },
   {
-    imagen1x:
-      'https://github.com/RamiiaHolomoza/light-summer-project/tree/main/src/img/covers/project5.png',
-    imagen2x:
-      'https://github.com/RamiiaHolomoza/light-summer-project/tree/main/src/img/covers/project5-retina.png',
+    imagen1x: img5x1,
+    imagen2x: img5x2,
   },
   {
-    imagen1x:
-      'https://github.com/RamiiaHolomoza/light-summer-project/tree/main/src/img/covers/project6.png',
-    imagen2x:
-      'https://github.com/RamiiaHolomoza/light-summer-project/tree/main/src/img/covers/project6-retina.png',
+    imagen1x: img6x1,
+    imagen2x: img6x2,
   },
   {
-    imagen1x:
-      'https://github.com/RamiiaHolomoza/light-summer-project/tree/main/src/img/covers/project7.png',
-    imagen2x:
-      'https://github.com/RamiiaHolomoza/light-summer-project/tree/main/src/img/covers/project7-retina.png',
+    imagen1x: img7x1,
+    imagen2x: img7x2,
   },
   {
-    imagen1x:
-      'https://github.com/RamiiaHolomoza/light-summer-project/tree/main/src/img/covers/project8.png',
-    imagen2x:
-      'https://github.com/RamiiaHolomoza/light-summer-project/tree/main/src/img/covers/project8-retina.png',
+    imagen1x: img8x1,
+    imagen2x: img8x2,
   },
   {
-    imagen1x:
-      'https://github.com/RamiiaHolomoza/light-summer-project/tree/main/src/img/covers/project9.png',
-    imagen2x:
-      'https://github.com/RamiiaHolomoza/light-summer-project/tree/main/src/img/covers/project9-retina.png',
+    imagen1x: img9x1,
+    imagen2x: img9x2,
   },
   {
-    imagen1x:
-      'https://github.com/RamiiaHolomoza/light-summer-project/tree/main/src/img/covers/project10.png',
-    imagen2x:
-      'https://github.com/RamiiaHolomoza/light-summer-project/tree/main/src/img/covers/project10-retina.png',
+    imagen1x: img10x1,
+    imagen2x: img10x2,
   },
 ];
 
