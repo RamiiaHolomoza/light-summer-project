@@ -33,7 +33,7 @@ function handleFormSubmit(event) {
     event.preventDefault();
     
     if (form.checkValidity()) {
-        openModal();
+        submitFormData();
     } else {
         alert('Fill in all fields');
     }
