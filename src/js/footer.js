@@ -78,22 +78,6 @@ function validateEmail(inputElement) {
     }
 }
 
-/*function validateInputLength(inputElement) {
-    const commentsInput = document.querySelector('.form-comments');
-    commentsInput.addEventListener('input', function ()  {
-    const currentLength = commentsInput.value.length;
-    const textContentImput = commentsInput.text.length;
-   
-    if (currentLength <= textContentImput) {
-        commentsInput.classList.add('.impute-ellips');
-        commentsInput.style.display = 'block';
-    }
-    })
-
-
-  validateInputLength();
-}*/
-
 
 function validateInputLength() {
     const commentsInput = document.querySelector('.form-comments');
@@ -136,10 +120,10 @@ closeModalBtn.addEventListener('click', function() {
     });
 
 window.addEventListener('keydown', (e) => {
-  if (e.key === "Escape") {
-    modal.classList.remove('is-open');
-  }
-    })
+    if (e.key === "Escape") {
+        modal.classList.remove('is-open');
+    }
+});
 
 function populateForm() {
     const savedFeedbackData = JSON.parse(localStorage.getItem(STORAGE_KEY));

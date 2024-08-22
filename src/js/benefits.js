@@ -45,10 +45,10 @@ export function createCardMarkup(cards) {
           <svg class="benefits-icon" width="24" height="24">
             <use href="${svgroot}"></use>
           </svg>
-          <div>
-            <h5 class="benefits-topic">${topic}</h5>
+          
+            <h3 class="benefits-topic">${topic}</h3>
             <p class="benefits-text">${text}</p>
-          </div>
+          
         </li>`
     )
     .join("");
@@ -65,3 +65,27 @@ export function handleCardClick(event) {
 }
 
 benefitsCardEl.addEventListener("click", handleCardClick);
+
+export const customScrollToElement = (elementId, duration = 1000) => {
+  const element = document.getElementById(elementId);
+  if (!element) return;
+
+  const start = window.scrollY;
+  const target = element.getBoundingClientRect().top + start;
+  const startTime = performance.now();
+
+  const animateScroll = currentTime => {
+    const timeElapsed = currentTime - startTime;
+    const progress = Math.min(timeElapsed / duration, 1);
+
+    window.scrollTo(0, start + (target - start) * easeInOutQuad(progress));
+
+    if (timeElapsed < duration) {
+      requestAnimationFrame(animateScroll);
+    }
+  };
+
+  const easeInOutQuad = t => (t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t);
+
+  requestAnimationFrame(animateScroll);
+};

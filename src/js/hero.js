@@ -15,10 +15,10 @@ const heroDataList = [
         followLink:"https://github.com/RamiiaHolomoza/light-summer-project" ,
         text: "GH",
     },
-    {
-        followLink: "mailto:lloydjefferson@gmail.com",
-        text:"lloydjefferson@gmail.com" ,
-    }
+    // {
+    //     followLink: "mailto:lloydjefferson@gmail.com",
+    //     text:"lloydjefferson@gmail.com" ,
+    // }
 ]
 
 const heroList = document.querySelector('.hero-list')

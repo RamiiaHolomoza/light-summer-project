@@ -16,6 +16,7 @@
     background-position: -268px 0px;
 }
 
+
 @media (min-resolution: 192dpi) {
     .container-hero {
         background-image: url('../img/hero/hero-blue-mob-2x.png');
@@ -30,6 +31,12 @@
     font-weight: 500;
 }
 
+.hero-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 4px;
+}
 .hero-list{
     display: flex;
     gap: 4px;   
@@ -38,30 +45,37 @@
 .hero-list-item{
     border: 1px solid rgba(250, 250, 250, 0.2);
     border-radius: 60px;
-}
-
-.hero-list-item:not(:last-child){
     width: 37px;
     height: 37px;
 }
 
-.hero-list-item:last-child{
-    padding: 10px 12px;
-}
-
-.hero-list-link{
+.hero-list-link {
     width: 100%;
     height: 100%;
     display: flex;
     font-size: 14px;
     letter-spacing: -0.02em;
     justify-content: center;
-    text-align: center;
     align-items: center;
 }
 
+
+.hero-contact-link{
+    border: 1px solid rgba(250, 250, 250, 0.2);
+    border-radius: 60px;
+    padding: 10px 12px;
+    height: 37px;
+}
+
+
+
+
+
+
 .hero-list-item:hover,
-.hero-list-item:focus {
+.hero-list-item:focus,
+.hero-contact:hover,
+.hero-contact:focus {
     border: 1px solid #fafafa;
 }
 
@@ -75,16 +89,18 @@
     .hero-list {
         justify-content: center;
     }
-
-    .hero-list-item:not(:last-child) {
+    
+    .hero-list-item {
         width: 30px;
         height: 30px;
     }
 
-    .hero-list-item:last-child {
-        padding: 7px 10px;
+    .hero-contact-link {
+        display: flex;
+        align-items: center;
+        
+        height: 30px;
     }
-
     .hero-list-link {
         font-size: 12px;
     }
@@ -106,22 +122,30 @@
         font-size: 90px;
     }
 
-    .hero-list{
-        gap:8px;
+    .hero-content {
+        font-weight: 500;
+        font-size: 16px;
+        letter-spacing: -0.02em;
+        gap: 8px;
+        font-size: 16px;
         justify-content: right;
     }
 
-    .hero-list-item:not(:last-child) {
+    .hero-list{
+        gap:8px;
+    }
+
+    .hero-list-item{
         width: 55px;
         height: 55px;
     }
     
-    .hero-list-item:last-child {
-        padding: 18px 24px;
-    }
-    .hero-list-link{
-    font-size: 16px;
-}
+    .hero-contact-link {
+            padding: 18px 24px;
+            width: 223px;
+            height: 55px;
+        }
+
 }
 
 @media screen and (min-width: 1440px) {
