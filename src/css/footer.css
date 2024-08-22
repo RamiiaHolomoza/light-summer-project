@@ -228,6 +228,10 @@
     cursor: pointer;
 }
 
+.footer-close-button:hover,
+.footer-close-button:focus{
+    background-color:#0039CF;
+}
 
 
 
