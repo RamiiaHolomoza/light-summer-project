@@ -90,6 +90,16 @@
 .email-message.error {
     color: #E74A3B;
 }
+.form-comments {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    display: inline-block;
+    max-width: 100%;
+}
+.impute-ellips {
+   border: #E74A3B;
+}
 .footer-form-button {
     margin-top: 16px;
     color: #fafafa;

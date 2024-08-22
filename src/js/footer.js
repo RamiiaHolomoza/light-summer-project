@@ -78,6 +78,47 @@ function validateEmail(inputElement) {
     }
 }
 
+/*function validateInputLength(inputElement) {
+    const commentsInput = document.querySelector('.form-comments');
+    commentsInput.addEventListener('input', function ()  {
+    const currentLength = commentsInput.value.length;
+    const textContentImput = commentsInput.text.length;
+   
+    if (currentLength <= textContentImput) {
+        commentsInput.classList.add('.impute-ellips');
+        commentsInput.style.display = 'block';
+    }
+    })
+
+
+  validateInputLength();
+}*/
+
+
+function validateInputLength() {
+    const commentsInput = document.querySelector('.form-comments');
+    const maxLength = commentsInput.getAttribute('maxlength');
+
+    commentsInput.addEventListener('input', function() {
+        const currentLength = commentsInput.value.length;
+
+        if (currentLength >= maxLength) {
+            commentsInput.value = commentsInput.value.substring(0, maxLength) + '...';
+        }
+        
+        updateTextOverflow(commentsInput);
+    });
+
+    updateTextOverflow(commentsInput);
+}
+
+function updateTextOverflow(inputElement) {
+    inputElement.classList.toggle('impute-ellips', inputElement.value.length >= inputElement.getAttribute('maxlength'));
+}
+
+validateInputLength();
+
+
 
 function openModal() {
   emailMessage.textContent = ' ';
