@@ -30,7 +30,7 @@
   flex-wrap: wrap;
   text-align: center;
   gap: 6px;
-  margin: 0px 32px 96px 32px;
+  margin-bottom: 96px;
 }
 
 .project-list:last-child {
@@ -40,8 +40,7 @@
   background-color: #fafafa;
   border-top-left-radius: 24px;
   border-top-right-radius: 24px;
-  padding-bottom: 32px;
-  padding-top: 32px;
+  padding: 32px;
 }
 
 .project-item-wrapper {
@@ -66,7 +65,7 @@
 .projects-description-item {
 }
 .projects-description-text {
-  margin: 0 32px 32px;
+  margin-bottom: 32px;
 
   /* text-align: center; */
   color: #1c1d20;
@@ -78,7 +77,6 @@
 }
 .projects-button {
   display: block;
-  margin-left: 32px;
   padding: 13px 32px;
   border-radius: 60px;
   background-color: #0041e8;
@@ -165,13 +163,12 @@
   } */
 
   .projects-section-total-wrapper {
-    padding-bottom: 64px;
-    padding-top: 64px;
+    padding: 64px 146px 64px 64px;
   }
 
   .project-list {
     flex-wrap: nowrap;
-    margin: 0px 32px 164px 64px;
+    margin-bottom: 164px;
   }
 
   .project-item {
@@ -185,11 +182,10 @@
     line-height: 100%;
     letter-spacing: -0.03em;
     width: 494px;
-    margin: 0 0 64px 64px;
+    margin-bottom: 64px;
   }
 
   .projects-button {
-    margin-left: 64px;
     width: 177px;
     height: 55px;
   }
@@ -231,6 +227,7 @@
     border-bottom-left-radius: 24px;
     border-top-left-radius: 24px;
     border-top-right-radius: 0px;
+    padding: 64px 130px 64px 64px;
   }
 
   .projects-image-nav-wrapper {
@@ -249,10 +246,10 @@
   }
 
   .project-list {
-    margin: 0px 32px 223px 64px;
+    margin-bottom: 223px;
   }
 
   .projects-description-text {
-    margin: 0 132px 32px 64px;
+    margin-bottom: 32px;
   }
 }
