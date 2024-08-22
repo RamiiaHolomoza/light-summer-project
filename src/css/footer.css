@@ -112,6 +112,16 @@
     color: #E74A3B;
     border-color: #E74A3B;
 }
+.form-comments {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    display: inline-block;
+    max-width: 100%;
+}
+.impute-ellips {
+   border: #e7493bec;
+}
 
 .footer-form-button {
     margin-top: 16px;
