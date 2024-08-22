@@ -39,7 +39,7 @@
     </h2>
 
     <form class="footer-form">
-      <label class="footer-form-label">
+      <label class="footer-form-label form-email">
         <input
           class="footer-form-label-input"
           type="email"
@@ -51,20 +51,23 @@
           value=""
           required
         />
+        <!-- <div class="input-text-mirror" data-mirror-for="email"></div> -->
         <span id="email-message" class="email-message"></span>
       </label>
       <label class="footer-form-label">
         <input
           class="footer-form-label-input form-comments"
           type="text"
+          id="text"
           name="comment"
           placeholder="comments"
           required
         />
+        <span id="text-message" class="text-message"></span>
       </label>
-      <button type="submit" class="footer-form-button open-btn-hover">
-        Send
-      </button>
+      <!-- <div class="input-text-mirror" data-mirror-for="text"></div> -->
+
+      <button type="submit" class="footer-form-button">Send</button>
     </form>
     <ul class="footer-contact-wrap-list">
       <li class="footer-contact-item">
@@ -106,5 +109,4 @@
       </div>
     </div>
   </div>
-  <!-- <script type="module" src="../js/footer.js"></script> -->
 </footer>
