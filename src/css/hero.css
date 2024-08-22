@@ -76,8 +76,8 @@
 
 .hero-list-item:hover,
 .hero-list-item:focus,
-.hero-contact:hover,
-.hero-contact:focus {
+.hero-contact-link:hover,
+.hero-contact-link:focus {
     border: 1px solid #fafafa;
 }
 
